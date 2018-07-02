@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>color</field_list>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Confirm booking</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	var facility_id = $sp.getParameter("facility_id");
+	var insurer = $sp.getParameter("insurer");
+	var gr = new GlideRecord("x_bhrl_hbm_bed_locator");
+	gr.addQuery("insurance_company", insurer);
+	gr.addQuery("facility", facility_id);
+	gr.query();
+	if(gr.next()){
+		var facility = new GlideRecord("core_company");
+		facility.get(facility_id);
+		data.facility = gr.getDisplayValue("facility");
+		data.phone = facility.getDisplayValue("phone");
+		data.created = gr.getDisplayValue("sys_created_on");
+		data.first_name = gr.getValue("first_name");
+		data.last_name = gr.getValue("last_name");
+		data.insurance = gr.getDisplayValue("insurance_company");
+		data.street = facility.getDisplayValue("street");
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>chris.corscadden</sys_created_by>
+        <sys_created_on>2018-05-30 00:13:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c031ef7edb9ad74082636f048a961954</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Confirm booking</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_widget_c031ef7edb9ad74082636f048a961954</sys_update_name>
+        <sys_updated_by>chris.corscadden</sys_updated_by>
+        <sys_updated_on>2018-05-30 00:45:36</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-{{::options.color}} b wrapper-lg text-center">
+<!-- your widget template -->
+  <h1>CONFIRMED BOOKING</h1>
+
+  <p>{{data.facility}} has received your bed placement request.</p>
+
+  <p>If you have any further requirements or questions please contact the facility directly on  {{data.phone}}</p>
+
+
+  <p>Confirmed Date: {{data.created}}</p>
+
+  <p>{{data.first_name}} {{data.last_name}}</p>
+
+  <div>
+    <p>{{data.facility}}</p>
+	<p>{{data.street}}</p>
+  </div>
+
+  <p>{{data.insurance}}</p>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>&#13;
+.intro_text{&#13;
+  color:$sec_blue;&#13;
+}&#13;
+&#13;
+/*.iconlink h2{&#13;
+  color:#fff;&#13;
+  text-transform:uppercase;&#13;
+}*/&#13;
+&#13;
+/* HAck to have large logo on home page */&#13;
+@media (min-width: 768px){&#13;
+  body .padding-top{&#13;
+    padding-top:90px;&#13;
+  }&#13;
+  &#13;
+  .v8e9c696bdb5ac30010ccfcc9bf961979 .navbar-brand img, .v8e9c696bdb5ac30010ccfcc9bf961979 .navbar-brand span{&#13;
+    margin:0 !important;&#13;
+    max-width:none !important;&#13;
+    max-height:none !important;&#13;
+    position: relative !important;&#13;
+    top: 20px !important;&#13;
+    transform:none !important;&#13;
+    -webkit-transform:none !important;&#13;
+  }&#13;
+ &#13;
+}&#13;
+&#13;
+@media (max-width: 992px) {&#13;
+  /*.iconlink{&#13;
+    transform:scale(0.9);&#13;
+    -webkit-transform:scale(0.9);&#13;
+  }&#13;
+  &#13;
+  .iconlink:before{&#13;
+    transform: rotateY(6deg) translate(7%) scale(1.0) !important;&#13;
+	}&#13;
+&#13;
+  div.col-md-3:nth-child(even) .iconlink:before{&#13;
+    transform: rotateY(-6deg) translate(-7%) scale(1.0) !important;&#13;
+  }*/&#13;
+}&#13;
+</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>hospitalbms_home</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-17 04:55:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fd25a5fadb061f0040c726b38a961964</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>hospitalbms_home</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_page_fd25a5fadb061f0040c726b38a961964</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-21 09:07:19</sys_updated_on>
+        <title>Hospital Bed Management - Home</title>
+    </sp_page>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_guide_items">
+    <sc_cat_item_guide_items action="INSERT_OR_UPDATE">
+        <condition>IO:4b84da07db4a1f0082636f048a96194cIN3de2790bdbc61f0082636f048a961930,7815f58bdbc61f0082636f048a96199e,f925758bdbc61f0082636f048a96196a,4b35798bdbc61f0082636f048a96190b,2b45798bdbc61f0082636f048a961911,d8cc694cdbd2d30040c726b38a961961,b3dc2d4cdbd2d30040c726b38a96196e^EQ</condition>
+        <guide display_value="Patient Bed Request">2175c20bdb0a1f0082636f048a961923</guide>
+        <ignore_mandatory_eval>false</ignore_mandatory_eval>
+        <item display_value="Semi Electric Beds">c10e2a03dbca1f0082636f048a96192a</item>
+        <order/>
+        <quantity>1</quantity>
+        <requested_by/>
+        <requested_for/>
+        <show_quantity>false</show_quantity>
+        <sys_class_name>sc_cat_item_guide_items</sys_class_name>
+        <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+        <sys_created_on>2018-05-18 05:07:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9a5176c3dbca1f0082636f048a9619b3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>2175c20bdb0a1f0082636f048a961923</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sc_cat_item_guide_items_9a5176c3dbca1f0082636f048a9619b3</sys_update_name>
+        <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+        <sys_updated_on>2018-05-22 00:01:41</sys_updated_on>
+        <use_sc_layout>true</use_sc_layout>
+    </sc_cat_item_guide_items>
+</record_update>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <display_field>asset_tag</display_field>
+        <field_list>display_name,primary_contact,model_category,assigned_to,location,asset_tag,quantity</field_list>
+        <filter table="x_bhrl_hbm_hospital_bed">install_status=1<item endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="1"/>
+        </filter>
+        <glyph>bed</glyph>
+        <id/>
+        <maximum_entries>10</maximum_entries>
+        <order>1</order>
+        <order_by>display_name</order_by>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8dd74247dbc6130040c726b38a961960</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table from URL Definition">8ae61f55cb21020000f8d856634c9c93</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-18 02:05:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>89d74247dbc6130040c726b38a961962</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Beds</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_instance_table_89d74247dbc6130040c726b38a961962</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-18 03:17:06</sys_updated_on>
+        <table>x_bhrl_hbm_hospital_bed</table>
+        <title>Beds</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_new": {
+		"value": false
+	},
+	"show_keywords": {
+		"value": false
+	},
+	"show_breadcrumbs": {
+		"value": true
+	},
+	"enable_filter": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"use_instance_title": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_table>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>png</format>
+        <height>64</height>
+        <image/>
+        <name>Twitter.png</name>
+        <size_bytes>2174</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:09</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>de6991e3db0e530040c726b38a9619bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Twitter.png</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>db_image_de6991e3db0e530040c726b38a9619bf</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 12:00:13</sys_updated_on>
+        <thumbnail/>
+        <width>64</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#ffffff</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>64</image_height>
+        <image_width>64</image_width>
+        <size_bytes>2174</size_bytes>
+        <size_compressed>2197</size_compressed>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:13</sys_created_on>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_id>167915e3db0e530040c726b38a961973</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 12:00:13</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>de6991e3db0e530040c726b38a9619bf</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="167915e3db0e530040c726b38a961973">167915e3db0e530040c726b38a961973</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:13</sys_created_on>
+        <sys_id>567915e3db0e530040c726b38a961973</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2916</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="167915e3db0e530040c726b38a961973">167915e3db0e530040c726b38a961973</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:13</sys_created_on>
+        <sys_id>d67915e3db0e530040c726b38a961973</sys_id>
+    </sys_attachment_doc>
+</record_update>

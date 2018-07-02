@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	c.showDetails = function(facility_id, bolBroadcast) {
+		addClass(document.getElementById("facility_detail"), 'show');
+		
+		if(bolBroadcast) $rootScope.$broadcast('showMapDetail', facility_id);//tell map to react
+		
+		c.data.facility_id = facility_id;
+		c.server.update().then(function() {
+			c.data.facility_id = undefined;
+		})
+	}
+	
+	c.hideDetails = function(item_id) {
+		removeClass(document.getElementById("facility_detail"), 'show');
+	}
+	
+	
+	$scope.$on('showFacilityDetail', function (event, data) {
+		c.showDetails(data, false);//facility sys_id broadcast from Map
+	});
+	
+	
+	/*function toggleClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+			if (hasClass(elem, className)) {
+					while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+							newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+					}
+					elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			} else {
+					elem.className += ' ' + className;
+			}
+	}
+	
+	function hasClass(elem, className) {
+			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+	}*/
+	
+	
+	function hasClass(el, className) {
+		if (el.classList)
+			return el.classList.contains(className)
+		else
+			return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+	}
+
+	function addClass(el, className) {
+		if (el.classList)
+			el.classList.add(className)
+		else if (!hasClass(el, className)) el.className += " " + className
+	}
+
+	function removeClass(el, className) {
+		if (el.classList)
+			el.classList.remove(className)
+		else if (hasClass(el, className)) {
+			var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+			el.className=el.className.replace(reg, ' ')
+		}
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+
+#facility_detail{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background:#fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+  overflow:auto;
+}
+
+#facility_detail.show{
+  visibility: visible;
+  opacity: 1;
+}
+
+a.panel-body.block:hover {
+    background: #eee;
+}
+
+.item-type{
+  font-weight:bold;
+  color:#000;
+}
+
+.item-image{
+  height:75px;
+  width:75px;
+  object-fit:cover;
+}
+
+.item-image-lg{
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper.bg{
+  background:#4285f4;
+  color:#fff;
+}
+
+.wrapper.bg h2, .wrapper.bg h4{
+  color:#fff;
+}
+
+.wrapper.instr{
+  background:#eee;
+  color:#000;
+}
+
+ol li a{
+  display:block;
+  width: 95%;
+	padding: 5px;
+}
+
+ol li a:hover{
+  background:#eee;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>facilities_list</id>
+        <internal>false</internal>
+        <link/>
+        <name>Facilities List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp, input, data, options) {
+	
+	//client script showDetails
+	if (input && input.facility_id) {
+		//retrieve facility detail
+			var gr_facility = new GlideRecord('core_company');
+			gr_facility.addQuery('sys_id', input.facility_id);
+			gr_facility.query();
+			while (gr_facility.next()) {
+				data.name = gr_facility.getDisplayValue();
+				data.picture = gr_facility.getDisplayValue('banner_image');
+				data.street = gr_facility.getValue('street');
+				data.zip = gr_facility.getValue('zip');
+				data.country = gr_facility.getValue('country');
+				data.website = gr_facility.getValue('website');
+				data.phone = gr_facility.getValue('phone');
+				data.type = gr_facility.getDisplayValue('u_facility_care_type');
+				data.beds = gr_facility.getValue('u_beds_available');
+				data.sys_id = gr_facility.getValue('sys_id');
+				
+				var insurers = new GlideRecord('x_bhrl_hbm_accepted_insurer');
+				insurers.addQuery('company', data.sys_id);
+				insurers.orderBy("insurer");
+				insurers.query();
+
+				data.insurers = [];
+				while (insurers.next()) {
+					var insurer = {};
+					insurer.sys_id = insurers.getValue('insurer');
+					insurer.name = insurers.getDisplayValue('insurer');
+					data.insurers.push(insurer);
+				}
+			}
+	} else {
+		//retrieve search results
+    data.list = [];
+    data.count = 0;
+	//data.title = gs.getMessage("My Product");
+	data.title="Facilities";
+//    var gr = new GlideRecord('alm_asset');
+	
+			var gr = new GlideRecord('core_company');
+    //gr.addQuery('consumer.user.sys_id', gs.getUserID());
+		if($sp.getParameter("city")){
+			gr.addQuery('city', 'CONTAINS', $sp.getParameter("city"));
+		}
+		if($sp.getParameter("zip")){
+			gr.addQuery('zip', 'CONTAINS', $sp.getParameter("zip"));
+		}
+		if($sp.getParameter("type")){
+			gr.addQuery('u_facility_care_type', 'CONTAINS', $sp.getParameter("type"));
+		}
+		gr.addNotNullQuery('u_facility_care_type');
+//		gr.addQuery('country', 'USA');
+    
+    gr.orderBy('name');
+		gr.query();
+    while (gr.next()) {
+        var record = {};
+				record.sys_id = gr.getValue('sys_id');
+				record.name = gr.getDisplayValue();
+record.city = gr.getValue('city');
+record.beds = gr.getValue('u_beds_available');
+record.type = gr.getDisplayValue('u_facility_care_type');
+record.typeID = gr.getValue('u_facility_care_type');
+record.picture = gr.getDisplayValue('banner_image');
+			
+/*				var product_id = gr.getValue('model');
+				var model = new GlideRecord('cmdb_model');
+				model.get(product_id);
+				record.short_description = model.getValue('short_description');
+				record.picture = model.getDisplayValue('picture');
+				record.model = product_id;
+*/				
+        data.list.push(record);
+    }
+	}
+	
+	
+	
+})($sp, input, data, options);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-26 14:47:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d9f2cef1db5a1b0040c726b38a961989</sys_id>
+        <sys_mod_count>144</sys_mod_count>
+        <sys_name>Facilities List</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_widget_d9f2cef1db5a1b0040c726b38a961989</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-29 05:44:38</sys_updated_on>
+        <template><![CDATA[<div>
+  <div class="padder-v">
+    <a ng-href="/bms"><span style="font-size:18px;">&#8678;</span> Back Home</a>  
+  </div>
+  
+  <div class="panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title ">{{c.data.title}}</h4> 
+    </div>
+  </div>
+  <div class="panel-body">
+    <!--div ng-init="spSearch.targetCatalog()"-->
+     <!-- &nbsp; -->
+      <div>    
+        <div ng-if="c.data.list.length" classIGNORE="col-sm-6 col-md-4" ng-repeat="item in c.data.list track by item.sys_id">
+            <div class="panel panel-{{::options.color}} b">
+              <a ng-click="c.showDetails(item.sys_id, true)" class="panel-body block">
+                <div class="overflow-100">
+                  <h4 class="m-t-none m-b-xs">{{item.name}}</h4>
+                  <img ng-src="{{item.picture}}" ng-if="item.picture" class="m-r-sm m-b-sm item-image pull-right" />
+									<div class="text-muted item-type">{{item.type}}</div>
+                  <div class="text-muted item-short-desc">{{item.city}}</div>
+                  <div class="">No. of beds: {{item.beds}}</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="facility_detail">
+          <div class="wrapper">
+          	<a ng-click="c.hideDetails()"><span style="font-size:18px;">&#8678;</span> Back to results</a>  
+          </div>
+
+         	<img ng-src="{{c.data.picture}}" ng-if="c.data.picture" class="item-image-lg" />  
+          <div class="wrapper bg">
+          	<h2 class="m-t-none">{{c.data.name}}</h2>
+            <h4>{{c.data.type}}</h4>
+					</div>
+
+          <div class="wrapper">
+            <div>
+							<i class="m-b m-r fa fa-map-marker fa-2x text-default"></i>{{c.data.street}}
+            </div>
+            <div>
+            	<i class="m-b m-r fa fa-globe fa-2x text-default"></i><a ng-href="{{c.data.website}}" target="_blank">{{c.data.website}}</a>
+            </div>
+            <div>
+            <i class="m-b m-r fa fa-phone fa-2x text-default"></i>{{c.data.phone}}
+            </div>
+          </div>
+          
+          <div class="wrapper bg-success text-center">
+							<p class="m-n"><strong>This facility has {{c.data.beds}} bed(s) available</strong></p>  
+          </div>
+        
+          <div class="wrapper instr">
+            <p>To secure a bed please select the patients insurance company from the list below and complete the required information.</p>
+          </div>
+          
+          <h4 class="wrapper">Accepted Insurance Companies</h4>
+
+          <ol class="m-b-xl">
+            <li class="m-b-sm m-t-sm" ng-repeat="insurer in c.data.insurers track by insurer.sys_id"><a ng-href="?id=sc_cat_item_2&sys_id=4d0f0a2edbda974082636f048a9619f0&facility_id={{c.data.sys_id}}&insurer={{insurer.sys_id}}">{{insurer.name}}</a></li>
+          </ol>
+          
+          <hr/>
+
+          
+        </div>
+    
+      </div>
+
+      <div ng-if="!c.data.list.length">
+          ${Facility not found}
+      </div>
+	<!--/div-->
+</div>]]></template>
+    </sp_widget>
+</record_update>

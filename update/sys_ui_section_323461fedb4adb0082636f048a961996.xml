@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="General" section_id="323461fedb4adb0082636f048a961996" sys_domain="global" table="x_bhrl_hbm_hospital_bed" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>asset_tag</element>
+            <position>0</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>fa3461fedb4adb0082636f048a961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>managed_by</element>
+            <position>1</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>7e3461fedb4adb0082636f048a961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>owned_by</element>
+            <position>2</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>fe3461fedb4adb0082636f048a961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>3</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>723461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>f23461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>serial_number</element>
+            <position>5</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>763461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <position>6</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>f63461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>department</element>
+            <position>7</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>7a3461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>company</element>
+            <position>8</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>fa3461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>7e3461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>10</position>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_id>fe3461fedb4adb0082636f048a961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">323461fedb4adb0082636f048a961996</sys_ui_section>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>General</caption>
+            <header>false</header>
+            <name>x_bhrl_hbm_hospital_bed</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+            <sys_created_on>2018-05-17 04:51:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>323461fedb4adb0082636f048a961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>General</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+            <sys_update_name>sys_ui_section_323461fedb4adb0082636f048a961996</sys_update_name>
+            <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

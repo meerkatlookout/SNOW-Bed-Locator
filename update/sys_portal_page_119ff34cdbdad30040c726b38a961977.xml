@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_portal_page" unload_date="2018-07-02 04:07:36">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout display_value="layout_2_across">f6defafa0a0a0b12000d5016bd12ff06</layout>
+        <order/>
+        <read_roles>snc_internal</read_roles>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-21 13:22:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_id>119ff34cdbdad30040c726b38a961977</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>catalog_bighouse_bed_locator</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_portal_page_119ff34cdbdad30040c726b38a961977</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-21 13:22:56</sys_updated_on>
+        <title>catalog_bighouse_bed_locator</title>
+        <user/>
+        <view>catalog_bighouse_bed_locator</view>
+    </sys_portal_page>
+</record_update>

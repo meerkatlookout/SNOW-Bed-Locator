@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">ea652a52db529b0040c726b38a96195d</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-28 06:35:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7665ea52db529b0040c726b38a9619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Welcome to the Bighouse Bed Locator</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_instance_7665ea52db529b0040c726b38a9619f8</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-28 06:35:19</sys_updated_on>
+        <title>Welcome to the Bighouse Bed Locator</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<h4 class=\"intro_text\" style=\"text-align: center;\">Welcome to the</h4>\n<h2 class=\"intro_text\" style=\"text-align: center;\">Bighouse Bed Locator</h2>",
+		"displayValue": "<h4 class=\"intro_text\" style=\"text-align: center;\">Welcome to the</h4>\n<h2 class=\"intro_text\" style=\"text-align: center;\">Bighouse Bed Locator</h2>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+</record_update>

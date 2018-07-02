@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function GoogleMapsNow(NgMap, $scope, $timeout) {
+
+	function isEmpty(obj) {
+			for(var key in obj) {
+					if(obj.hasOwnProperty(key))
+							return false;
+			}
+			return true;
+		}
+	
+	$scope.$on('showMapDetail', function (event, data) {
+			var marker = findObjectByKey(markers, 'sys_id', data);
+			infoWindow.setContent(marker.msg);//PD was data.description
+			infoWindow.open(c.map, marker);
+	});
+	
+	function calcRoute(map, location, destination, mode) {
+		var directionsService = new google.maps.DirectionsService(),
+			directionsDisplay = new google.maps.DirectionsRenderer(),
+			method;
+
+		directionsDisplay.setMap(map);
+
+		if (mode.toUpperCase() === 'BICYCLING') {
+			method = google.maps.TravelMode.BICYCLING;
+		} else if (mode.toUpperCase() === 'DRIVING') {
+			method = google.maps.TravelMode.DRIVING;
+		} else if (mode.toUpperCase() === 'WALKING') {
+			method = google.maps.TravelMode.WALKING;
+		} else if (mode.toUpperCase() === 'TRANSIT') {
+			method = google.maps.TravelMode.TRANSIT;
+		}
+
+		var request = {
+			origin: location,
+			destination: destination,
+			optimizeWaypoints: true,
+			travelMode: method
+		};
+
+		directionsService.route(request, function(response, status) {
+			if (status === google.maps.DirectionsStatus.OK) {
+				directionsDisplay.setDirections(response);
+			}
+		});
+
+	}
+
+	var markers = [];
+	
+	function findObjectByKey(array, key, value) {
+			for (var i = 0; i < array.length; i++) {
+					if (array[i][key] === value) {
+							return array[i];
+					}
+			}
+			return null;
+	}
+	
+	
+	function generateMarkers(map, dataMarkers) {
+		
+var bounds  =  new google.maps.LatLngBounds();
+		
+		var nMarkers = dataMarkers.length;
+
+
+		for (var i = 0; i < nMarkers; i++) {
+			if (dataMarkers[i].image === undefined) {
+				markers[i] = new google.maps.Marker({
+					title: "" + dataMarkers[i].title,
+					label: {
+									text:"" + dataMarkers[i].label,
+									fontWeight:"bold",
+									color:"red"},
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+					icon:{
+						//origin: new google.maps.Point(20, 30),
+				    //anchor: new google.maps.Point(20, 32),
+						url: "https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi-dotless2.png",
+						labelOrigin:new google.maps.Point(20, -10)
+					},
+					sys_id:dataMarkers[i].sys_id,
+					msg:"<strong>Available Beds</strong>: " + dataMarkers[i].beds
+				});
+				
+				
+			// Creating a closure to retain the correct data
+			(function(marker, data) {
+				// Attaching a click event to the current marker
+				google.maps.event.addListener(marker, "click", function(e) {
+					infoWindow.setContent(data);//PD was data.description
+					infoWindow.open(map, marker);
+					$rootScope.$broadcast('showFacilityDetail', this.sys_id);
+				});
+
+
+			})(markers[i], markers[i].msg);//was data instead of string
+				
+
+			} else {
+				var imageUrl, imageSize, imageOrigin, imageAnchor;
+				imageUrl = dataMarkers[i].image.url;
+				imageSize = dataMarkers[i].image.size.split(",");
+				imageOrigin = dataMarkers[i].image.origin.split(",");
+				imageAnchor = dataMarkers[i].image.anchor.split(",");
+
+
+				var image = {
+					url: imageUrl,
+					size: new google.maps.Size(parseInt(imageSize[0], 10), parseInt(imageSize[1], 10)),
+					origin: new google.maps.Point(parseInt(imageOrigin[0], 10), parseInt(imageOrigin[1], 10)),
+					anchor: new google.maps.Point(parseInt(imageAnchor[0], 10), parseInt(imageAnchor[1], 10))
+				};
+
+
+				markers[i] = new google.maps.Marker({
+					title: dataMarkers[i].title,
+					label: dataMarkers[i].label,
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+					icon: image
+				});
+				
+			}
+		}
+
+		GenerateMapMarkers = function(map, markers, dataMarkers) {
+			$scope.date = Date(); // Just to show that we are updating
+
+			for (i = 0; i < nMarkers; i++) {
+				var lat = dataMarkers[i].lat;
+				var lng = dataMarkers[i].lng;
+				var latlng = new google.maps.LatLng(lat, lng);
+bounds.extend(latlng);
+				
+				markers[i].setPosition(latlng);
+				markers[i].setMap(map);
+			}
+			
+map.fitBounds(bounds);
+map.panToBounds(bounds);
+			/*
+			            $timeout(function () {
+			                GenerateMapMarkers(map,markers,dataMarkers);
+			            },2000);*/
+			// , 2000 to update every 2 seconds
+		};
+
+		GenerateMapMarkers(map, markers, dataMarkers);
+	}
+
+	var c = this;
+
+	/* ----- PD Added ----- */
+    c.click = function(event) {
+      alert(event);
+      //c.map.setCenter(marker.getPosition());
+    }
+	/* ----- END PD Added ----- */
+	
+	//If options data is available, then I use options...
+	var option_values = c.options,
+		data_values = c.data,
+		data,
+		location = "",
+		destination = "",
+		zoom = "",
+		mode = "",
+		route = true;
+
+
+	//packaging data, pre-defined/static options or data from JSON?
+	if (option_values.json_settings !== undefined) {
+		data = JSON.parse(option_values.json_settings);
+		data = data.data;
+	} else {
+		if (data_values !== undefined) {
+			data = data_values;
+		}
+	}
+	
+	console.log(data);
+	if (isEmpty(data)){
+		return;
+	}
+
+	location = data.location;
+	destination = data.destination;
+	zoom = parseInt(data.zoom, 10);
+	mode = data.mode.toLowerCase();
+
+	//it is a simple map or an itinerary calculation?
+	if (mode === 'map') {
+		route = false;
+	}
+
+	
+var infoWindow = new google.maps.InfoWindow();
+
+	
+	
+	//Start playing with my map
+	NgMap.getMap().then(function(map) {
+
+		//PD added 2 lines
+		c.map = map;
+    //marker = map.markers[0];
+		
+		if (mode !== 'map') { //it is an ititinerary
+			map.setZoom(zoom);
+			calcRoute(map, location, destination, mode);
+
+		} else {
+			if (location.length > 0) {
+
+				var geocoder = new google.maps.Geocoder();
+				geocoder.geocode({
+					'address': location
+				}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+
+						var pos = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+						console.log(pos);
+						map.setCenter(pos);
+						map.setZoom(zoom);
+
+						if (data.markers !== undefined) {
+							generateMarkers(map, data.markers);
+						}
+
+					}
+					console.log(status);
+				});
+
+			} else {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					$scope.$apply(function() {
+						$scope.current_position = position;
+						$scope.latitude = position.coords.latitude;
+						$scope.longitude = position.coords.longitude;
+
+						var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+						map.setCenter(pos);
+						map.setZoom(zoom);
+						if (data.markers !== undefined) {
+							generateMarkers(map, data.markers);
+						}
+
+
+					});
+				});
+			}
+
+		}
+
+	});
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>ng-map {&#13;
+  	display: block;&#13;
+    left: 0;&#13;
+    right: 0;&#13;
+    top: 0;&#13;
+    position: absolute;&#13;
+    bottom: 0;&#13;
+    height: auto !important;&#13;
+}&#13;
+&#13;
+/*div#map-container{&#13;
+  	background: red;&#13;
+    height: 100%;&#13;
+    width: 100%;&#13;
+    position: relative;&#13;
+    height: 100%;&#13;
+    min-height: 100%;&#13;
+    top: 0;&#13;
+    bottom: 0;&#13;
+    left: 0;&#13;
+    right: 0;&#13;
+}*/&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>google-maps-from-locations</id>
+        <internal>false</internal>
+        <link/>
+        <name>Google Maps from Locations</name>
+        <option_schema>[{"hint":"","name":"json_settings","default_value":"","section":"other","label":"JSON Settings","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp, input, data, options) {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+		var gr = new GlideRecord('core_company');
+		if($sp.getParameter("city")){
+			gr.addQuery('city', 'CONTAINS', $sp.getParameter("city"));
+		}
+		if($sp.getParameter("zip")){
+			gr.addQuery('zip', 'CONTAINS', $sp.getParameter("zip"));
+		}
+		if($sp.getParameter("type")){
+			gr.addQuery('u_facility_care_type', 'CONTAINS', $sp.getParameter("type"));
+		}
+
+		gr.addNotNullQuery('u_facility_care_type');
+	
+		//gr.addQuery('country', 'USA');
+    gr.query();
+	
+data.mode = "map";
+data.location = "Missouri";
+data.destination = "Missouri";
+data.zoom = "17";
+data.markers = [];
+	
+    while (gr.next()) {
+			if(gr.getValue('latitude')){
+				item = {
+						 "label":gr.getDisplayValue(),
+						 "title":gr.getDisplayValue(),
+						 "lat":gr.getValue('latitude'),
+						 "lng":gr.getValue('longitude'),
+						 "beds":gr.getValue('u_beds_available'),
+						 "sys_id"	: gr.getValue('sys_id')
+					};
+				data.markers.push(item);
+			}
+		}
+
+
+//ORIG schema seemed to always pickup default value so removed [{"hint":"","name":"json_settings","default_value":"{    \"data\":{       \"mode\":\"driving\",       \"location\":\"2225 Lawson Ln, Santa Clara, CA 95054, USA\",       \"destination\":\"San Diego, California\",       \"zoom\":\"17\",       \"markers\":[          {             \"label\":\"Break area\",             \"title\":\"ServiceNow\",             \"lat\":\"37.375470\",             \"lng\":\"-121.962434\",             \"image\":{                \"url\":\"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png\",                \"size\":\"20,32\",                \"origin\":\"0,0\",                \"anchor\":\"0,32\"             }          },          {             \"label\":\"PlatExp Entrance\",             \"title\":\"ServiceNow\",             \"lat\":\"37.374907\",             \"lng\":\"-121.963015\"          }       ]    } }","label":"JSON Settings","type":"string"}]
+})($sp, input, data, options);
+
+
+
+/*(function($sp, input, data, options) {
+    data.list = [];
+    data.count = 0;
+	//data.title = gs.getMessage("My Product");
+	data.title="Facilities";
+//    var gr = new GlideRecord('alm_asset');
+	
+			var gr = new GlideRecord('core_company');
+    //gr.addQuery('consumer.user.sys_id', gs.getUserID());
+		gr.addQuery('city', 'CONTAINS', $sp.getParameter("city"));
+    //gr.orderByDesc('sys_updated_on');
+    gr.query();
+    while (gr.next()) {
+        var record = {};
+				record.sys_id = gr.getValue('sys_id');
+				record.name = gr.getValue('display_name');
+record.short_description = gr.getValue('street');
+				
+        data.list	.push(record);
+    }
+})($sp, input, data, options);*/]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-26 14:45:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d562ca39db1a1b0040c726b38a9619f7</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>Google Maps from Locations</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_widget_d562ca39db1a1b0040c726b38a9619f7</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-29 04:49:16</sys_updated_on>
+        <template><![CDATA[<!--div id="map-container"-->
+	<ng-map zoom="5" center="[37.2757241, -104.6551679]" zoom-to-include-markers="true"></ng-map>
+<!--/div-->]]></template>
+    </sp_widget>
+</record_update>

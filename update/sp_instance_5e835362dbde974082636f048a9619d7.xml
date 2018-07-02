@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>th-large</glyph>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">92835362dbde974082636f048a9619d6</sp_column>
+        <sp_widget display_value="SC Catalog Item 2">eaa3d362dbde974082636f048a9619cb</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>chris.corscadden</sys_created_by>
+        <sys_created_on>2018-05-29 04:35:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5e835362dbde974082636f048a9619d7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SC Catalog Item</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_instance_5e835362dbde974082636f048a9619d7</sys_update_name>
+        <sys_updated_by>chris.corscadden</sys_updated_by>
+        <sys_updated_on>2018-05-29 04:44:12</sys_updated_on>
+        <title>SC Catalog Item</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_add_cart_button": {
+		"value": "true",
+		"displayValue": "true"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+</record_update>

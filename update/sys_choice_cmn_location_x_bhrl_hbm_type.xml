@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_bhrl_hbm_type" table="cmn_location" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Hospital</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>0</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>8e0c5536db4adb0082636f048a96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>hospital</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Building</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>1</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>ce0c5536db4adb0082636f048a96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>building</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Wing</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>2</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>4e0c5536db4adb0082636f048a9619a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>wing</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ward</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>3</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>0a0c9536db4adb0082636f048a96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>ward</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Floor</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>4</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>860c9536db4adb0082636f048a96192b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>floor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Room</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>5</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>060c9536db4adb0082636f048a96192c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>room</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_bhrl_hbm_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Bed Location</label>
+            <language>en</language>
+            <name>cmn_location</name>
+            <sequence>6</sequence>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>820c9536db4adb0082636f048a96192d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+            <value>bed location</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_bhrl_hbm_type</element>
+            <name>cmn_location</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:15:58</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>8a0c5536db4adb0082636f048a96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_bhrl_hbm_type</sys_name>
+            <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+            <sys_update_name>sys_choice_cmn_location_x_bhrl_hbm_type</sys_update_name>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:15:58</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

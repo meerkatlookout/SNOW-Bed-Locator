@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysevent_email_template">
+    <sysevent_email_template action="INSERT_OR_UPDATE">
+        <collection>sc_request</collection>
+        <email_layout display_value="Unsubscribe and Preferences">1410041f3b0b2200c869c2c703efc41e</email_layout>
+        <message><![CDATA[Click here to view Request: ${URI_REF}
+
+Number: ${number}
+Due date: ${due_date}
+Opened: ${opened_at}
+Approval: ${approval}
+
+<mail_script>
+  template.print("<p></p>Requested items:\n");
+
+  var gr = new GlideRecord("sc_req_item");
+  gr.addQuery("request", current.sys_id);
+  gr.query();
+  while(gr.next()) {
+    var stage = gr.stage.getDisplayValue();
+    if (JSUtil.nil(stage))
+        stage = gr.stage.getChoiceValue();
+    template.print(gr.number + ":  " + gr.cat_item.getDisplayValue() + ", Stage: " + stage + "\n");
+  }
+</mail_script>]]></message>
+        <message_html><![CDATA[<table width="100%" bgcolor="#ffffff" border="0" cellpadding="10" cellspacing="0" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;">
+<tbody>
+<tr>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><!-- [if (gte mso 9)|(IE)]>
+      <table width="600" align="center" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td>
+    <![endif]-->
+<table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; max-width: 600px; border-collapse: collapse;" width="600">
+<tbody>
+<tr>
+<td valign="top" mc:edit="headerBrand" id="templateContainerHeader" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 14px; padding-top: 2.429em; padding-bottom: 0.929em;">
+<p style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #314b70; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.500em; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: center; margin: 0 0 15px 0; padding: 0;"><img src="https://bighouseresourcesdemo1.service-now.com/75292b72db421f0082636f048a961931.iix" style="max-width: 100%; border: 0; line-height: 100%; outline: none; text-decoration: none; height: auto; min-height: 1px; display: inline-block;" /></p>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainer" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; border-radius: 4px 4px 0 0; background-clip: padding-box; border-spacing: 0; border-collapse: collapse;">
+<tbody>
+<tr>
+<td valign="top" class="bodyContent" mc:edit="body_content_01" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #314b70; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 150%; text-align: left; padding: 3.143em 3.5em 0.714em 3.5em;" align="left">
+<p style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #314b70; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.500em; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; margin: 0 0 15px 0;">Dear ${requested_for.first_name} ${requested_for.last_name},</p>
+<p style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #314b70; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.500em; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; margin: 0 0 15px 0;">Your request for a bed has been approved.</p>
+<p style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #314b70; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.500em; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; margin: 0 0 15px 0;">Click here to view the Request Details: <strong>${URI_REF}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" valign="top" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><!-- BEGIN BODY // -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateContainerMiddle" class="brdBottomPadd" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-bottom: 1px solid #f0f0f0; border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; border-collapse: collapse;">
+<tbody>
+<tr>
+<td valign="top" class="bodyContent" mc:edit="body_content" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #314b70; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 150%; text-align: left; padding: 3.143em 3.5em 2.286em 3.5em;" align="left">
+<table style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; font-size: 12px; line-height: 14px; color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; border-collapse: collapse;" border="0" width="80%" cellspacing="0" cellpadding="0" align="center" bgcolor="#eeeeee">
+<tbody>
+<tr style="border: 1px solid #ccc;">
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="30%"><strong>Number:</strong></td>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="70%">${number}</td>
+</tr>
+<tr style="border: 1px solid #ccc;">
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="30%"><strong>Due date:</strong></td>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="70%">${due_date}</td>
+</tr>
+<tr style="border: 1px solid #ccc;">
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="30%"><strong>Opened:</strong></td>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="70%">${opened_at}</td>
+</tr>
+<tr style="border: 1px solid #ccc;">
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="30%"><strong>Approval:</strong></td>
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" align="left" width="70%">${approval}</td>
+</tr>
+<tr style="border: 1px solid #ccc;">
+<td style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #ccc; padding: 5px;" colspan="2" align="left">${mail_script:request.general_script_1}</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- // END BODY --></td>
+</tr>
+<tr>
+<td align="center" valign="top" id="bodyCellFooter" class="unSubContent" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; padding-top: 39px; padding-bottom: 15px; width: 100%;" width="100%">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="templateContainerFooter" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse;">
+<tbody>
+<tr>
+<td valign="top" width="100%" mc:edit="footer_unsubscribe" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<p style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #314b70; display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.500em; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: center; margin: 0 0 15px 0; padding: 0;"><img src="https://bighouseresourcesdemo1.service-now.com/75292b72db421f0082636f048a961931.iix" style="max-width: 100%; border: 0; line-height: 100%; outline: none; text-decoration: none; height: auto; min-height: 1px; display: inline-block;" width="105" height="58" /></p>
+<h6 style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; color: #a1a1a1; font-size: 12px; line-height: 1.5em; text-align: center; margin: 9px 0 0 0;">Bighouse Bed Locator</h6>
+<h6 style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; color: #a1a1a1; font-size: 12px; line-height: 1.5em; text-align: center; margin: 0;">589​ Howard​ Street​</h6>
+<h6 style="display: block; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-weight: normal; letter-spacing: normal; color: #a1a1a1; font-size: 12px; line-height: 1.5em; text-align: center; margin: 0;">San Francisco,​ CA​ 94105​</h6>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- [if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+    </table>
+    <![endif]--></td>
+</tr>
+</tbody>
+</table>
+<style type="text/css"><!--
+@media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+  body[yahoo] .hide {
+    display: none!important;
+  }
+
+  body[yahoo] .buttonwrapper {
+    background-color: transparent!important;
+  }
+
+  body[yahoo] .button {
+    padding: 0px!important;
+  }
+
+  body[yahoo] .button a {
+    background-color: #e05443;
+    padding: 15px 15px 13px!important;
+  }
+
+  body[yahoo] .unsubscribe {
+    font-size: 14px;
+    display: block;
+    margin-top: 0.714em;
+    padding: 10px 50px;
+    background: #2f3942;
+    border-radius: 5px;
+    text-decoration: none!important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 34px !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  h4 {
+    font-size: 18px !important;
+  }
+
+  h5 {
+    font-size: 16px !important;
+  }
+
+  h6 {
+    font-size: 14px !important;
+  }
+
+  p {
+    font-size: 18px !important;
+  }
+
+  .brdBottomPadd .bodyContent {
+    padding-bottom: 2.286em !important;
+  }
+
+  .bodyContent {
+    padding: 6% 5% 1% 6% !important;
+  }
+
+  .bodyContent img {
+    max-width: 100% !important;
+  }
+
+  .bodyContentImage {
+    padding: 3% 6% 6% 6% !important;
+  }
+
+  .bodyContentImage img {
+    max-width: 100% !important;
+  }
+
+  .bodyContentImage h4 {
+    font-size: 16px !important;
+  }
+
+  .bodyContentImage h5 {
+    font-size: 15px !important;
+    margin-top: 0;
+  }
+}
+--></style>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>request.general.bms</name>
+        <sms_alternate/>
+        <subject>Request ${number}</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:04:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>987a59e3db0e530040c726b38a9619f8</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>request.general.bms</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sysevent_email_template_987a59e3db0e530040c726b38a9619f8</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-21 02:31:00</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+</record_update>

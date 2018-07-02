@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <enforce_license>none</enforce_license>
+        <js_level>helsinki_es5</js_level>
+        <licensable>true</licensable>
+        <license_model>none</license_model>
+        <logo/>
+        <menu/>
+        <name>Big House Hospital Bed Manager</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_bhrl_hbm</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description/>
+        <source>x_bhrl_hbm</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>chris.corscadden</sys_created_by>
+        <sys_created_on>2018-05-16 06:16:24</sys_created_on>
+        <sys_id>280ea8a2db0e9b0082636f048a9619d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chris.corscadden</sys_updated_by>
+        <sys_updated_on>2018-05-16 06:16:24</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.0</version>
+    </sys_app>
+</record_update>

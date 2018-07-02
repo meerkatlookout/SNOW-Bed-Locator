@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Hospital">5afea9ccdb96df0082636f048a9619e1</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>pratik.parekh</sys_created_by>
+        <sys_created_on>2018-05-21 02:52:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_id>6a3fadccdb96df0082636f048a96193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5afea9ccdb96df0082636f048a9619e1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_6a3fadccdb96df0082636f048a96193a</sys_update_name>
+        <sys_updated_by>pratik.parekh</sys_updated_by>
+        <sys_updated_on>2018-05-21 02:52:13</sys_updated_on>
+        <tab display_value="Report">263fadccdb96df0082636f048a961938</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>

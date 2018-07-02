@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="a08f10b6db86db0082636f048a961974" sys_domain="09ff3d105f231000b12e3572f2b4775d" table="x_bhrl_hbm_hospital_bed" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:32</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>648f98f6db86db0082636f048a9619bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a08f10b6db86db0082636f048a961974</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">288f98f6db86db0082636f048a9619b9</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:32</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>2c8f98f6db86db0082636f048a9619bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a08f10b6db86db0082636f048a961974</sys_ui_form>
+            <sys_ui_section caption="General" display_value="General" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a88f98f6db86db0082636f048a9619bb</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:32</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>a08f10b6db86db0082636f048a96197a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a08f10b6db86db0082636f048a961974</sys_ui_form>
+            <sys_ui_section caption="Financial" display_value="Financial" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">ac8f10b6db86db0082636f048a961976</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:32</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>e08f98f6db86db0082636f048a9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a08f10b6db86db0082636f048a961974</sys_ui_form>
+            <sys_ui_section caption="Contracts" display_value="Contracts" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">e48f98f6db86db0082636f048a9619b7</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:32</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>608f98f6db86db0082636f048a9619bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">a08f10b6db86db0082636f048a961974</sys_ui_form>
+            <sys_ui_section caption="Activities" display_value="Activities" name="x_bhrl_hbm_hospital_bed" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="Default view">608f98f6db86db0082636f048a9619be</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_bhrl_hbm_hospital_bed</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-16 23:51:31</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>a08f10b6db86db0082636f048a961974</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_bhrl_hbm_hospital_bed</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_a08f10b6db86db0082636f048a961974</sys_update_name>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-16 23:51:31</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

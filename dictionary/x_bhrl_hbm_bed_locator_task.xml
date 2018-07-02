@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Bed Locator Task" max_length="40" name="x_bhrl_hbm_bed_locator_task" type="collection">
+        <element label="Bed Locator" max_length="32" name="bed_locator" reference="x_bhrl_hbm_bed_locator" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Patient Bed Request">2175c20bdb0a1f0082636f048a961923</catalog_item>
+        <catalog_variable>IO:12bf9243db8a1f0082636f048a9619f6</catalog_variable>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+        <sys_created_on>2018-05-21 01:32:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>200d558cdb56df0082636f048a9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>street_address2</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_200d558cdb56df0082636f048a9619a3</sys_update_name>
+        <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+        <sys_updated_on>2018-05-21 01:32:44</sys_updated_on>
+        <table/>
+        <ui_policy display_value="hide variable depending on patient type">ff2c954cdb56df0082636f048a9619a7</ui_policy>
+        <variable>street_address2</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

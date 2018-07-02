@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="29bd5976db4adb0082636f048a961949" sys_domain="09ff3d105f231000b12e3572f2b4775d" table="cmn_location" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:23:18</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>a5bd5976db4adb0082636f048a96194c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="cmn_location" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">29bd5976db4adb0082636f048a961949</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:23:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:23:18</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>e5bd5976db4adb0082636f048a96194d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="cmn_location" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">29bd5976db4adb0082636f048a961949</sys_ui_form>
+            <sys_ui_section caption="Hospital Reference" display_value="Hospital Reference" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">e1bd5976db4adb0082636f048a961948</sys_ui_section>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:23:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>cmn_location</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-17 04:23:18</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+            <sys_id>29bd5976db4adb0082636f048a961949</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cmn_location</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+            <sys_update_name>sys_ui_form_sections_29bd5976db4adb0082636f048a961949</sys_update_name>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-17 04:23:18</sys_updated_on>
+            <sys_user/>
+            <view display_value="Hospital" name="Hospital">9954d5bedb0adb0082636f048a96199c</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Imp Tmpl X Bhrl Hbm Drg Code" max_length="40" name="u_imp_tmpl_x_bhrl_hbm_drg_code" type="collection">
+        <element attributes="import_attribute_name=Code Description,edge_encryption_enabled=true" label="Code Description" max_length="415" name="u_code_description" type="string"/>
+        <element attributes="import_attribute_name=CPT Codes,edge_encryption_enabled=true" label="CPT Codes" max_length="40" name="u_cpt_codes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="MDC" max_length="40" name="u_mdc" type="string"/>
+        <element label="MS DRG" max_length="40" name="u_ms_drg" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="MS DRG Title" max_length="40" name="u_ms_drg_title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Type" max_length="40" name="u_type" type="string"/>
+    </element>
+</database>

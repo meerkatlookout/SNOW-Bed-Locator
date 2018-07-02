@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="HMO Codes" max_length="40" name="x_bhrl_hbm_hmo_codes" type="collection">
+        <element label="Carrier code" max_length="40" name="carrier_code" type="string"/>
+        <element label="Carrrier subcode" max_length="40" name="carrrier_subcode" type="string"/>
+        <element label="Guide name" max_length="40" name="guide_name" type="string"/>
+    </element>
+</database>

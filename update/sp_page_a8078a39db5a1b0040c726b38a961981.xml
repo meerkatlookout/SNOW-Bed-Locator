@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css>.sp-row-content{
+  position:relative;
+}
+
+.col-md-3{
+  overflow:hidden;
+  height:100%;
+  background: #fff;
+}
+
+.col-md-9 {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+}
+
+/*.panel-body{
+    max-height: 500px;
+    overflow: auto;
+}*/
+
+.sp-row-content, .container-fluid, .body, .body &gt; div {
+    height: 100%;
+}</css>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>google_maps_test</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-26 15:05:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a8078a39db5a1b0040c726b38a961981</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>google_maps_test</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_page_a8078a39db5a1b0040c726b38a961981</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-28 02:28:22</sys_updated_on>
+        <title>Google Maps Test</title>
+    </sp_page>
+</record_update>

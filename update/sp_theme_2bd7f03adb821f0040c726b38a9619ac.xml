@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_theme">
+    <sp_theme action="INSERT_OR_UPDATE">
+        <css_variables>$sp-logo-margin-x: 		15px !default;&#13;
+&#13;
+$body-bg: 				#f0f3f4 !default;&#13;
+&#13;
+$sec_blue:				#314b70;&#13;
+$sec_orange:			#004d9d; /* was orange #f18a1e;*/&#13;
+$sec_bg_dark:			#DEEAF8;&#13;
+$sec_bg_light:			#FCFDFF;&#13;
+&#13;
+$sp-tagline-color:		#ff0000 !default;&#13;
+&#13;
+$font-family-sans-serif:  "Raleway", Helvetica, Arial, sans-serif !default;&#13;
+$font-family-base:        $font-family-sans-serif !default;&#13;
+$headings-font-family:    "Oswald";&#13;
+&#13;
+/*$navbar-inverse-bg:     			$sec_blue !default;&#13;
+$navbar-inverse-link-color:			#ffffff !default;&#13;
+$navbar-inverse-link-hover-color:	#ffffff !default;&#13;
+$navbar-default-brand-hover-color:	#ff0000 !default;*/&#13;
+&#13;
+$navbar-inverse-bg:							transparent !default;&#13;
+$navbar-inverse-toggle-hover-bg:           $sec_orange !default;&#13;
+$navbar-inverse-toggle-icon-bar-bg:        $sec_blue !default;&#13;
+$navbar-inverse-toggle-border-color:       $sec_blue !default;&#13;
+$navbar-inverse-toggle-border:				$sec_blue !default;&#13;
+&#13;
+/* breadcrumbs */&#13;
+$nav-link-hover-bg:     $sec_orange !default;&#13;
+&#13;
+/* Typography */&#13;
+$headings-color:					$sec_blue;&#13;
+&#13;
+/* Panels */&#13;
+$panel-primary-border:        $sec_blue !default;&#13;
+$panel-primary-heading-bg:    $sec_blue !default;</css_variables>
+        <footer display_value="Sample Footer">feb4f763df121200ba13a4836bf26320</footer>
+        <footer_fixed>true</footer_fixed>
+        <header display_value="SEC Header">8e9c696bdb5ac30010ccfcc9bf961979</header>
+        <name>Hospital Bed Manager</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-17 01:38:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2bd7f03adb821f0040c726b38a9619ac</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Hospital Bed Manager</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_theme_2bd7f03adb821f0040c726b38a9619ac</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-18 05:40:12</sys_updated_on>
+    </sp_theme>
+</record_update>

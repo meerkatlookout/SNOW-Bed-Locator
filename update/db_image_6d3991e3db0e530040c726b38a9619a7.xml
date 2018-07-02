@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>png</format>
+        <height>64</height>
+        <image/>
+        <name>facebook.png</name>
+        <size_bytes>1643</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 11:59:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6d3991e3db0e530040c726b38a9619a7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>facebook.png</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>db_image_6d3991e3db0e530040c726b38a9619a7</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 11:59:39</sys_updated_on>
+        <thumbnail/>
+        <width>64</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#fffffe</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>64</image_height>
+        <image_width>64</image_width>
+        <size_bytes>1643</size_bytes>
+        <size_compressed>1666</size_compressed>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 11:59:39</sys_created_on>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_id>7559d1e3db0e530040c726b38a961971</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 11:59:39</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>6d3991e3db0e530040c726b38a9619a7</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="7559d1e3db0e530040c726b38a961971">7559d1e3db0e530040c726b38a961971</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 11:59:39</sys_created_on>
+        <sys_id>b559d1e3db0e530040c726b38a961971</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>2208</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="7559d1e3db0e530040c726b38a961971">7559d1e3db0e530040c726b38a961971</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 11:59:39</sys_created_on>
+        <sys_id>3959d1e3db0e530040c726b38a961971</sys_id>
+    </sys_attachment_doc>
+</record_update>

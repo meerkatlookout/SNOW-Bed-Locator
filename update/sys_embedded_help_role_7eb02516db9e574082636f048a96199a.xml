@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_bhrl_hbm.accepted_health_insurances_user" name="x_bhrl_hbm.accepted_health_insurances_user">f2b02516db9e574082636f048a961998</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
+        <sys_created_on>2018-05-28 01:35:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7eb02516db9e574082636f048a96199a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f2b02516db9e574082636f048a961998</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_embedded_help_role_7eb02516db9e574082636f048a96199a</sys_update_name>
+        <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
+        <sys_updated_on>2018-05-28 01:35:14</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>png</format>
+        <height>64</height>
+        <image/>
+        <name>GooglePlus.png</name>
+        <size_bytes>2362</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3b7995e3db0e530040c726b38a961922</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GooglePlus.png</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>db_image_3b7995e3db0e530040c726b38a961922</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 12:00:32</sys_updated_on>
+        <thumbnail/>
+        <width>64</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#ffffff</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <image_height>64</image_height>
+        <image_width>64</image_width>
+        <size_bytes>2362</size_bytes>
+        <size_compressed>2385</size_compressed>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:32</sys_created_on>
+        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_id>768995e3db0e530040c726b38a961927</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-05-19 12:00:32</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>3b7995e3db0e530040c726b38a961922</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="768995e3db0e530040c726b38a961927">768995e3db0e530040c726b38a961927</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:32</sys_created_on>
+        <sys_id>b68995e3db0e530040c726b38a961927</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>3168</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="768995e3db0e530040c726b38a961927">768995e3db0e530040c726b38a961927</sys_attachment>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-05-19 12:00:32</sys_created_on>
+        <sys_id>3a8995e3db0e530040c726b38a961927</sys_id>
+    </sys_attachment_doc>
+</record_update>

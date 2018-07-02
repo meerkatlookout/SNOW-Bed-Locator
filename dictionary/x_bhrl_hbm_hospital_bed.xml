@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="alm_asset" label="Hospital Bed" max_length="40" name="x_bhrl_hbm_hospital_bed" type="collection">
+        <element label="Bed Location" max_length="32" name="bed_location" reference="cmn_location" reference_qual="x_bhrl_hbm_type=bed location^EQ" reference_qual_condition="x_bhrl_hbm_type=bed location^EQ" type="reference"/>
+        <element display="true" label="HCPCS Code" mandatory="true" max_length="200" name="hcpcs" type="string"/>
+        <index name="index">
+            <element name="bed_location"/>
+        </index>
+    </element>
+</database>
