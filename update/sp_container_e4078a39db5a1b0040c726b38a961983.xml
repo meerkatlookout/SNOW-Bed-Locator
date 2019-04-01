@@ -7,24 +7,22 @@
         <bootstrap_alt>false</bootstrap_alt>
         <class_name/>
         <container_class_name/>
-        <name>Google Maps Test - Container 1</name>
+        <name>Bed Locator Map - Container 1</name>
         <order>1</order>
-        <sp_page display_value="google_maps_test">a8078a39db5a1b0040c726b38a961981</sp_page>
+        <sp_page display_value="bed_locator_map">a8078a39db5a1b0040c726b38a961981</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-26 15:05:30</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e4078a39db5a1b0040c726b38a961983</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Google Maps Test - Container 1</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Bed Locator Map - Container 1</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_container_e4078a39db5a1b0040c726b38a961983</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-26 15:05:40</sys_updated_on>
+        <sys_updated_on>2018-07-04 01:18:55</sys_updated_on>
         <title/>
         <width>container-fluid</width>
     </sp_container>

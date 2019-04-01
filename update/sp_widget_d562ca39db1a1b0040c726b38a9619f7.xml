@@ -4,6 +4,7 @@
         <category>custom</category>
         <client_script><![CDATA[function GoogleMapsNow(NgMap, $scope, $timeout) {
 
+
 	function isEmpty(obj) {
 			for(var key in obj) {
 					if(obj.hasOwnProperty(key))
@@ -13,12 +14,20 @@
 		}
 	
 	$scope.$on('showMapDetail', function (event, data) {
-			var marker = findObjectByKey(markers, 'sys_id', data);
-			infoWindow.setContent(marker.msg);//PD was data.description
+			var marker = $scope.map.markers[data];
+		  getProximity(c.data.currentLat, c.data.currentLng, marker.latitude , marker.longitude);	
+			infoWindow.setContent("<h4>" + marker.facility + "</h4><p>Available beds: " + marker.beds + "</p><p id='prox'></p>");//PD was data.description
 			infoWindow.open(c.map, marker);
 	});
+		
+	/*$scope.$on('showMapDetail', function (event, data) {
+			var marker = findObjectByKey(markers, 'sys_id', data);
+			//infoWindow.setContent(marker.msg);//PD was data.description
+			infoWindow.setContent('<div class="infoWindowContent"><h1>Hi there</h1></div>');//PD was data.description
+			infoWindow.open(c.map, marker);
+	});*/
 	
-	function calcRoute(map, location, destination, mode) {
+/*	function calcRoute(map, location, destination, mode) {
 		var directionsService = new google.maps.DirectionsService(),
 			directionsDisplay = new google.maps.DirectionsRenderer(),
 			method;
@@ -49,8 +58,34 @@
 		});
 
 	}
+*/
+	markers = [];
+	
+  var selectedItemID;
+	var posx;
+	
+	//combine these two functions and only brodcast when clicked
+	$scope.showItem = function (event) {
+		//getCurrentLocation();
+		getProximity(c.data.currentLat, c.data.currentLng, this.latitude , this.longitude);	
+		infoWindow.setContent("<h4>" + this.facility + "</h4><p>Available beds: " + this.beds + "</p><p id='prox'></p>");
+		infoWindow.open(c.map, this);
+		$rootScope.$broadcast('showFacilityDetail', this.id);
+		selectedItemID = this.id;
+	};
+	
+	$scope.previewItem = function (event) {
+		//alert('1: ' + c.data.currentLat);
+		//getCurrentLocation();
+		//alert('2: ' + c.data.currentLat);
+		getProximity(c.data.currentLat, c.data.currentLng, this.latitude , this.longitude);	
+		infoWindow.setContent("<h4>" + this.facility + "</h4><p>Available beds: " + this.beds + "</p><p id='prox'></p>");
+		infoWindow.open(c.map, this);
+	};
 
-	var markers = [];
+	$scope.hideItem = function (event) {
+		if(this.id != selectedItemID) infoWindow.close();
+	};
 	
 	function findObjectByKey(array, key, value) {
 			for (var i = 0; i < array.length; i++) {
@@ -64,30 +99,50 @@
 	
 	function generateMarkers(map, dataMarkers) {
 		
-var bounds  =  new google.maps.LatLngBounds();
+		setNullOnAllMarkers();
+		var bounds  =  new google.maps.LatLngBounds();
 		
 		var nMarkers = dataMarkers.length;
 
 
 		for (var i = 0; i < nMarkers; i++) {
 			if (dataMarkers[i].image === undefined) {
+				if(dataMarkers[i].label === c.data.currentFacility){
 				markers[i] = new google.maps.Marker({
 					title: "" + dataMarkers[i].title,
-					label: {
+					/*label: {
 									text:"" + dataMarkers[i].label,
 									fontWeight:"bold",
-									color:"red"},
+									color:"#2157A2"},*/
 					draggable: false,
 					animation: google.maps.Animation.DROP,
 					icon:{
-						//origin: new google.maps.Point(20, 30),
-				    //anchor: new google.maps.Point(20, 32),
-						url: "https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi-dotless2.png",
+						url: "Hospital_Blue.png",
+						scaledSize: new google.maps.Size(50, 50),
 						labelOrigin:new google.maps.Point(20, -10)
 					},
 					sys_id:dataMarkers[i].sys_id,
-					msg:"<strong>Available Beds</strong>: " + dataMarkers[i].beds
+					msg:"<h4>" + dataMarkers[i].label + "</h4>"
 				});
+				}else{
+				markers[i] = new google.maps.Marker({
+					title: "" + dataMarkers[i].title,
+					/*label: {
+									text:"" + dataMarkers[i].label,
+									fontWeight:"bold",
+									color:"red"},*/
+					draggable: false,
+					animation: google.maps.Animation.DROP,
+					icon:{
+						url: "Hospital_BlueAll.png",
+						scaledSize: new google.maps.Size(40, 40),
+						labelOrigin:new google.maps.Point(20, -10)
+					},
+					sys_id:dataMarkers[i].sys_id,
+					msg:"<h4>" + dataMarkers[i].label + "</h4>"
+				});					
+				}
+				
 				
 				
 			// Creating a closure to retain the correct data
@@ -96,14 +151,12 @@ var bounds  =  new google.maps.LatLngBounds();
 				google.maps.event.addListener(marker, "click", function(e) {
 					infoWindow.setContent(data);//PD was data.description
 					infoWindow.open(map, marker);
-					$rootScope.$broadcast('showFacilityDetail', this.sys_id);
+					//$rootScope.$broadcast('showFacilityDetail', this.sys_id);
 				});
-
-
 			})(markers[i], markers[i].msg);//was data instead of string
 				
 
-			} else {
+			}/* else {
 				var imageUrl, imageSize, imageOrigin, imageAnchor;
 				imageUrl = dataMarkers[i].image.url;
 				imageSize = dataMarkers[i].image.size.split(",");
@@ -127,12 +180,19 @@ var bounds  =  new google.maps.LatLngBounds();
 					icon: image
 				});
 				
-			}
+			}*/
 		}
 
+		
+		
+		console.log("MARKERS: " + markers);
+
 		GenerateMapMarkers = function(map, markers, dataMarkers) {
+			
 			$scope.date = Date(); // Just to show that we are updating
 
+
+			
 			for (i = 0; i < nMarkers; i++) {
 				var lat = dataMarkers[i].lat;
 				var lng = dataMarkers[i].lng;
@@ -143,8 +203,8 @@ bounds.extend(latlng);
 				markers[i].setMap(map);
 			}
 			
-map.fitBounds(bounds);
-map.panToBounds(bounds);
+			//map.fitBounds(bounds);
+			//map.panToBounds(bounds);
 			/*
 			            $timeout(function () {
 			                GenerateMapMarkers(map,markers,dataMarkers);
@@ -156,21 +216,30 @@ map.panToBounds(bounds);
 	}
 
 	var c = this;
-
-	/* ----- PD Added ----- */
-    c.click = function(event) {
-      alert(event);
-      //c.map.setCenter(marker.getPosition());
-    }
-	/* ----- END PD Added ----- */
 	
+	var markerIcon2x = {
+  url: 'http://maps.google.com/mapfiles/ms/icons/hospitals.png',
+  scaledSize: new google.maps.Size(80, 80),
+  origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(32,65),
+  labelOrigin: new google.maps.Point(40,33)
+};
+	
+	//var origin = new google.maps.Point(40,33);
+	//alert('origin: ' + origin);
+	
+	c.data.markerIcon2 = markerIcon2x;
+	c.server.update();
+	
+	
+
 	//If options data is available, then I use options...
 	var option_values = c.options,
 		data_values = c.data,
 		data,
 		location = "",
 		destination = "",
-		zoom = "",
+		zoom = 4,
 		mode = "",
 		route = true;
 
@@ -185,7 +254,7 @@ map.panToBounds(bounds);
 		}
 	}
 	
-	console.log(data);
+	//console.log(data);
 	if (isEmpty(data)){
 		return;
 	}
@@ -200,25 +269,187 @@ map.panToBounds(bounds);
 		route = false;
 	}
 
-	
+//alert('Lat: ' + posx);	
 var infoWindow = new google.maps.InfoWindow();
+	
 
 	
+function getProximity(currentLat, currentLng, destLat, destLng){ 	
+var origin = new google.maps.LatLng(currentLat, currentLng);
+var destination = new google.maps.LatLng(destLat, destLng);	
+
+var service = new google.maps.DistanceMatrixService();
+service.getDistanceMatrix(
+  {
+    origins: [origin],
+    destinations: [destination],
+    travelMode: 'DRIVING',
+    unitSystem: google.maps.UnitSystem.IMPERIAL,
+    avoidHighways: false,
+    avoidTolls: false
+  }, callback);
+	//alert(service.getDistanceMatrix);
+}
+
+function callback(response, status) {
+  // See Parsing the Results for
+  // the basics of a callback function.
+	var str = '';
+	  if (status == 'OK') {
+    var origins = response.originAddresses;
+    var destinations = response.destinationAddresses;
+
+    for (var i = 0; i < origins.length; i++) {
+      var results = response.rows[i].elements;
+      for (var j = 0; j < results.length; j++) {
+        var element = results[j];
+        var distance = element.distance.text;
+        var duration = element.duration.text;
+        var from = origins[i];
+        var to = destinations[j];
+				//alert(distance + ' - ' + distance.length);
+				if(distance.length > 0){ 
+				str = 'Distance: ' + distance + ' (' + duration + ')';
+				//alert(str)
+				prox.innerHTML = str;
+				}
+      }
+    }
+  }
+	return str;
+}	
 	
+	function getCurrentLocation(){
+		    if(isEmpty(c.data.currentLat)){ 
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+						posx = pos;
+//alert('Lat: ' + pos.lat);
+						c.data.currentLat = pos.lat;
+						c.data.currentLng = pos.lng;
+						//alert('a: ' + c.data.currentLat);
+						c.server.update();
+						//alert('b: ' + c.data.currentLat);						
+						
+var infoWindow2;
+						infoWindow2 = new google.maps.InfoWindow;
+            infoWindow2.setPosition(pos);
+            infoWindow2.setContent('Your current Location.');
+            infoWindow2.open(map);
+            //map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+				}		
+		
+	}
+	
+	//initMap();
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }	
+
+	//dodgy way, but attempt to clear all previous markers
+	function setNullOnAllMarkers() {
+		for (var i = 0; i < markers.length; i++) {
+			alert(i + " : " + markers[i]);
+			markers[i].setMap(null);
+		}
+		markers=[];
+	}
+	
+  $scope.loopMarkers = function() {
+    for (var key in $scope.map.markers) {
+      console.log(key + " : " + $scope.map.markers[key]);
+
+/*			$scope.map.markers[key].setOptions({
+				icon:{
+						//origin: new google.maps.Point(20, 30),
+				    //anchor: new google.maps.Point(20, 32),
+						url: "https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi-dotless2.png",
+						labelOrigin:new google.maps.Point(20, -10)
+					}});
+			
+			$scope.map.markers[key].setLabel({text:"HELLO", color:"red", fontWeight:"bold"});
+	*/		
+			
+									
+    }
+  };
+	
+	$scope.hideMarkers = function() {
+    for (var key in $scope.map.hmarkers) {
+      $scope.map.hmarkers[key].setMap(null);
+    }
+  };
+	//alert('1111');
 	//Start playing with my map
 	NgMap.getMap().then(function(map) {
-
+//alert('2222');
+		
 		//PD added 2 lines
 		c.map = map;
+		
+						if (data.hmarkers !== undefined) {
+							console.log("markers: " + markers);
+							//tNullOnAllMarkers();
+							//alert('inside');
+							generateMarkers(map, data.hmarkers);
+						}		
     //marker = map.markers[0];
 		
-		if (mode !== 'map') { //it is an ititinerary
+/*		if (mode !== 'map') { //it is an ititinerary
 			map.setZoom(zoom);
 			calcRoute(map, location, destination, mode);
 
-		} else {
+		} else {*/
 			if (location.length > 0) {
-
 				var geocoder = new google.maps.Geocoder();
 				geocoder.geocode({
 					'address': location
@@ -226,19 +457,29 @@ var infoWindow = new google.maps.InfoWindow();
 					if (status === google.maps.GeocoderStatus.OK) {
 
 						var pos = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-						console.log(pos);
-						map.setCenter(pos);
-						map.setZoom(zoom);
-
-						if (data.markers !== undefined) {
-							generateMarkers(map, data.markers);
+						
+						
+		console.log(">>>" + Object.keys(map.markers));
+		
+						
+						//$scope.hideMarkers();
+						$scope.loopMarkers();
+						
+						//map.setCenter(pos);
+						//map.setZoom(zoom);
+//alert('hello');
+						if (data.hmarkers !== undefined) {
+							console.log("markers: " + markers);
+							//tNullOnAllMarkers();
+							//alert('inside');
+							//generateMarkers(map, data.hmarkers);
 						}
 
 					}
-					console.log(status);
+					//console.log(status);
 				});
 
-			} else {
+			/*} else {
 				navigator.geolocation.getCurrentPosition(function(position) {
 					$scope.$apply(function() {
 						$scope.current_position = position;
@@ -256,7 +497,7 @@ var infoWindow = new google.maps.InfoWindow();
 
 					});
 				});
-			}
+			}*/
 
 		}
 
@@ -264,28 +505,33 @@ var infoWindow = new google.maps.InfoWindow();
 
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css>ng-map {&#13;
-  	display: block;&#13;
-    left: 0;&#13;
-    right: 0;&#13;
-    top: 0;&#13;
-    position: absolute;&#13;
-    bottom: 0;&#13;
-    height: auto !important;&#13;
-}&#13;
-&#13;
-/*div#map-container{&#13;
-  	background: red;&#13;
-    height: 100%;&#13;
-    width: 100%;&#13;
-    position: relative;&#13;
-    height: 100%;&#13;
-    min-height: 100%;&#13;
-    top: 0;&#13;
-    bottom: 0;&#13;
-    left: 0;&#13;
-    right: 0;&#13;
-}*/&#13;
+        <css>ng-map {
+  	display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    height: auto !important;
+}
+/*
+.gm-style div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div[style]{
+  color:red !important;
+  background:#fff;
+}*/
+
+/*div#map-container{
+  	background: red;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}*/
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -304,22 +550,56 @@ var infoWindow = new google.maps.InfoWindow();
   /* populate the 'data' object */
   /* e.g., data.table = $sp.getValue('table'); */
 
-		var gr = new GlideRecord('core_company');
+	var facilityName = $sp.getParameter("name");
+	data.facility_name = facilityName;
+	
+	var guser = new GlideRecord('sys_user');
+	guser.addQuery('sys_id', gs.getUserID());
+	guser.addNotNullQuery('x_bhrl_hbm_facility');
+	guser.query();
+	if(guser.next()){ 
+		data.currentLat =  guser.getDisplayValue('x_bhrl_hbm_facility.location.latitude');
+		data.currentLng =  guser.getDisplayValue('x_bhrl_hbm_facility.location.longitude');
+		data.currentFacility = guser.getDisplayValue('x_bhrl_hbm_facility');
+	}
+	
+
+	
+		var gr = new GlideRecord('x_bhrl_hbm_facility');
 		if($sp.getParameter("city")){
-			gr.addQuery('city', 'CONTAINS', $sp.getParameter("city"));
+			gr.addQuery('location.city', 'CONTAINS', $sp.getParameter("city"));
 		}
 		if($sp.getParameter("zip")){
-			gr.addQuery('zip', 'CONTAINS', $sp.getParameter("zip"));
+			gr.addQuery('location.zip', 'CONTAINS', $sp.getParameter("zip"));
 		}
 		if($sp.getParameter("type")){
-			gr.addQuery('u_facility_care_type', 'CONTAINS', $sp.getParameter("type"));
+			gr.addQuery('facility_care_type', 'CONTAINS', $sp.getParameter("type"));
 		}
-
-		gr.addNotNullQuery('u_facility_care_type');
+		if($sp.getParameter("name")){
+			gr.addQuery('name', 'CONTAINS', $sp.getParameter("name"));
+		}	
 	
+		var insurerName = $sp.getParameter("insurer_name");
+	  gr.addQuery('type', 'Facility');
+		gr.addNotNullQuery('facility_care_type');
+    gr.orderBy('name');//make same as facilities list widget so that if using sequential numbering they should match
 		//gr.addQuery('country', 'USA');
     gr.query();
-	
+data.getBedAvailability = function(sys_id, type){
+		var count = new GlideAggregate('x_bhrl_hbm_hospital_bed');
+		count.addQuery('install_status',1);
+		count.addQuery('facility', sys_id);
+		if($sp.getParameter("type")){
+		count.addQuery('care_type', 'CONTAINS', type);
+		}
+			count.addAggregate('COUNT','care_type');
+		count.query();
+		var typeCount = 0;
+		while(count.next()){
+		  typeCount = count.getAggregate('COUNT','care_type');
+		}
+		return typeCount
+	};
 data.mode = "map";
 data.location = "Missouri";
 data.destination = "Missouri";
@@ -327,18 +607,82 @@ data.zoom = "17";
 data.markers = [];
 	
     while (gr.next()) {
-			if(gr.getValue('latitude')){
+			//gs.addInfoMessage(gr.getDisplayValue());
+		gs.info("chris corscadden: " + gr.getDisplayValue('location.latitude'));
+			if(gr.getDisplayValue('location.latitude')){
+
+var markerIcon = {
+  url: 'http://maps.google.com/mapfiles/ms/icons/blue.png'
+	//labelOrigin: '(40, 33)'
+  //scaledSize: new google.maps.Size(80, 80)
+  /*origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(32,65),
+  labelOrigin: new google.maps.Point(40,33)*/
+};	
+				
+				
+				
 				item = {
 						 "label":gr.getDisplayValue(),
 						 "title":gr.getDisplayValue(),
-						 "lat":gr.getValue('latitude'),
-						 "lng":gr.getValue('longitude'),
-						 "beds":gr.getValue('u_beds_available'),
+						 "lat":gr.getDisplayValue('location.latitude'),
+						 "lng":gr.getDisplayValue('location.longitude'),
+						//"beds":1,
+						 //"beds":gr.getValue('u_beds_available'),
+						 "beds":data.getBedAvailability(gr.getUniqueValue(), $sp.getParameter("type")),					
 						 "sys_id"	: gr.getValue('sys_id')
+					   //"icon": markerIcon
+					   //"url": "http://maps.google.com/mapfiles/ms/icons/hospitals.png"
 					};
-				data.markers.push(item);
+				
+			
+				//only push records where that match Insurer if provided in Querystring
+				if(insurerName){
+					var insurers = new GlideRecord('x_bhrl_hbm_accepted_insurer');
+					insurers.addQuery('facility', item.sys_id);
+					insurers.addQuery('insurer.name', insurerName);
+					insurers.query();
+					if(insurers.next()){
+						data.markers.push(item);
+					}
+				} else {
+					data.markers.push(item);
+				}
+				
+
 			}
 		}
+	
+	data.hmarkers = [];
+	var grHos = new GlideRecord('x_bhrl_hbm_facility');
+	grHos.addQuery('type', 'Hospital');
+	grHos.query();
+	while(grHos.next()){
+var markerIcon2 = {
+  url: 'Hospital_BlueAll.png',
+	scaledSize: 50
+	//labelOrigin: '-20,100'
+  //scaledSize: new google.maps.Size(80, 80)
+  /*origin: new google.maps.Point(0, 0),
+  anchor: new google.maps.Point(32,65),
+  labelOrigin: new google.maps.Point(40,33)*/
+};		
+						item2 = {
+						 "label":grHos.getDisplayValue(),
+						 "title":grHos.getDisplayValue(),
+						 "lat":grHos.getDisplayValue('location.latitude'),
+						 "lng":grHos.getDisplayValue('location.longitude'),
+						//"beds":1,
+						 //"beds":gr.getValue('u_beds_available'),
+						 //"beds":data.getBedAvailability(grHos.getUniqueValue(), $sp.getParameter("type")),					
+						 "sys_id"	: grHos.getValue('sys_id'),
+					   "icon": markerIcon2
+						 //"left": -20,
+						 //"top": 200
+					   //"url": "http://maps.google.com/mapfiles/ms/icons/hospitals.png"
+					};
+				data.hmarkers.push(item2);
+	}	
 
 
 //ORIG schema seemed to always pickup default value so removed [{"hint":"","name":"json_settings","default_value":"{    \"data\":{       \"mode\":\"driving\",       \"location\":\"2225 Lawson Ln, Santa Clara, CA 95054, USA\",       \"destination\":\"San Diego, California\",       \"zoom\":\"17\",       \"markers\":[          {             \"label\":\"Break area\",             \"title\":\"ServiceNow\",             \"lat\":\"37.375470\",             \"lng\":\"-121.962434\",             \"image\":{                \"url\":\"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png\",                \"size\":\"20,32\",                \"origin\":\"0,0\",                \"anchor\":\"0,32\"             }          },          {             \"label\":\"PlatExp Entrance\",             \"title\":\"ServiceNow\",             \"lat\":\"37.374907\",             \"lng\":\"-121.963015\"          }       ]    } }","label":"JSON Settings","type":"string"}]
@@ -371,19 +715,30 @@ record.short_description = gr.getValue('street');
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-26 14:45:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>d562ca39db1a1b0040c726b38a9619f7</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>439</sys_mod_count>
         <sys_name>Google Maps from Locations</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_widget_d562ca39db1a1b0040c726b38a9619f7</sys_update_name>
-        <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-29 04:49:16</sys_updated_on>
-        <template><![CDATA[<!--div id="map-container"-->
-	<ng-map zoom="5" center="[37.2757241, -104.6551679]" zoom-to-include-markers="true"></ng-map>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-08-29 05:39:09</sys_updated_on>
+        <template><![CDATA[<!--div id="map-container" -->
+	<ng-map zoom-to-include-markers="true" max-zoom="19" min-zoom="5" zoom="5" center="[37.2757241, -104.6551679]">
+		<marker ng-repeat="pos in data.markers" latitude="{{pos.lat}}" longitude="{{pos.lng}}" 
+            position="{{pos.lat}}, {{pos.lng}}" icon="{{pos.icon}}"
+            id="{{pos.sys_id}}" facility="{{pos.label}}" on-click="showItem($event)"
+            on-mouseover="previewItem($event)" on-mouseout="hideItem($event)" beds="{{pos.beds}}"
+            label="{text:'{{$index+1}}' , color:'white', fontWeight:'bold'}" animation="DROP"
+            ></marker>
+		<!--<marker ng-repeat="pos2 in data.hmarkers" 
+            position="{{pos2.lat}}, {{pos2.lng}}" icon="{{pos2.icon}}" label_offset_left="-20" label_offset_top="500"
+            id="{{pos2.sys_id}}" facility="{{pos2.label}}" on-click="showItem($event)"
+            on-mouseover="previewItem($event)" on-mouseout="hideItem($event)" beds="{{pos2.beds}}"
+            animation="DROP"
+            ></marker>   -->
+  </ng-map>
 <!--/div-->]]></template>
     </sp_widget>
 </record_update>

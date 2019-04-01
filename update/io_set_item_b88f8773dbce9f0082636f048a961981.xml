@@ -6,13 +6,11 @@
         <sys_class_name>io_set_item</sys_class_name>
         <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
         <sys_created_on>2018-05-20 15:14:26</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>b88f8773dbce9f0082636f048a961981</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Bed Request Details.Total Electric Beds</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>io_set_item_b88f8773dbce9f0082636f048a961981</sys_update_name>
         <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>

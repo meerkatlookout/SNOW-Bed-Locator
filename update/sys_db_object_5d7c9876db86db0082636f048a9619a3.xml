@@ -17,19 +17,17 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Asset" name="alm_asset">ccfcfde3db13220010ccfcc9bf9619b1</super_class>
+        <super_class display_value="Asset" name="alm_asset">56cc519d5d521300651727c3e282e819</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>chris.corscadden</sys_created_by>
         <sys_created_on>2018-05-16 23:39:42</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>5d7c9876db86db0082636f048a9619a3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Hospital Bed</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sys_db_object_5d7c9876db86db0082636f048a9619a3</sys_update_name>
         <sys_updated_by>chris.corscadden</sys_updated_by>

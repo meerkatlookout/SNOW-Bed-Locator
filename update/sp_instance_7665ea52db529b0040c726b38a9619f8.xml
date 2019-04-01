@@ -16,24 +16,23 @@
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-28 06:35:19</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>7665ea52db529b0040c726b38a9619f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Welcome to the Bighouse Bed Locator</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_instance_7665ea52db529b0040c726b38a9619f8</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-28 06:35:19</sys_updated_on>
+        <sys_updated_on>2018-07-06 02:21:53</sys_updated_on>
         <title>Welcome to the Bighouse Bed Locator</title>
         <url/>
         <widget_parameters><![CDATA[{
 	"html": {
-		"value": "<h4 class=\"intro_text\" style=\"text-align: center;\">Welcome to the</h4>\n<h2 class=\"intro_text\" style=\"text-align: center;\">Bighouse Bed Locator</h2>",
-		"displayValue": "<h4 class=\"intro_text\" style=\"text-align: center;\">Welcome to the</h4>\n<h2 class=\"intro_text\" style=\"text-align: center;\">Bighouse Bed Locator</h2>"
+		"value": "<p><img class=\"m-t\" title=\"Bed Locator\" src=\"75292b72db421f0082636f048a961931.iix\" alt=\"Bed Locator\" /></p>",
+		"displayValue": "<p><img class=\"m-t\" title=\"Bed Locator\" src=\"75292b72db421f0082636f048a961931.iix\" alt=\"Bed Locator\" /></p>"
 	}
 }]]></widget_parameters>
     </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=7665ea52db529b0040c726b38a9619f8"/>
 </record_update>

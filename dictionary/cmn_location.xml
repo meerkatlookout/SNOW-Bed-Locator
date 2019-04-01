@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element attributes=",text_index_translations" label="מיקום" max_length="40" name="cmn_location" text_index="true" type="collection">
+    <element attributes="all_tables.text_index_translations=true,text_index_translations=true" label="Location" max_length="40" name="cmn_location" text_index="true" type="collection">
         <element label="Building" max_length="32" name="x_bhrl_hbm_building" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=building^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element label="Floor" max_length="32" name="x_bhrl_hbm_floor" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=floor^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element label="Hospital" max_length="32" name="x_bhrl_hbm_hospital" reference="cmn_location" reference_qual="x_bhrl_hbm_type=hospital^EQ" reference_qual_condition="x_bhrl_hbm_type=hospital^EQ" type="reference"/>
@@ -27,19 +27,19 @@
         <element label="Ward" max_length="32" name="x_bhrl_hbm_ward" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=ward^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element label="Wing" max_length="32" name="x_bhrl_hbm_wing" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=wing^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <index name="index">
-            <element name="x_bhrl_hbm_ward"/>
-        </index>
-        <index name="index2">
-            <element name="x_bhrl_hbm_hospital"/>
-        </index>
-        <index name="index3">
-            <element name="x_bhrl_hbm_wing"/>
-        </index>
-        <index name="index4">
             <element name="x_bhrl_hbm_floor"/>
         </index>
-        <index name="index5">
+        <index name="index2">
             <element name="x_bhrl_hbm_building"/>
+        </index>
+        <index name="index3">
+            <element name="x_bhrl_hbm_ward"/>
+        </index>
+        <index name="index4">
+            <element name="x_bhrl_hbm_hospital"/>
+        </index>
+        <index name="index5">
+            <element name="x_bhrl_hbm_wing"/>
         </index>
         <index name="index6">
             <element name="x_bhrl_hbm_room"/>

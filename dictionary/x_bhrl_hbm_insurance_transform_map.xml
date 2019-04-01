@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="Insurance Transform Map" max_length="40" name="x_bhrl_hbm_insurance_transform_map" type="collection">
+        <element attributes="import_attribute_name=Company,edge_encryption_enabled=true" label="Company" max_length="65" name="u_company" type="string"/>
+        <element attributes="import_attribute_name=Facility,edge_encryption_enabled=true" label="Facility" max_length="65" name="u_facility" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 1,edge_encryption_enabled=true" label="Insurance Company 1" max_length="40" name="u_insurance_company_1" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 10,edge_encryption_enabled=true" label="Insurance Company 10" max_length="40" name="u_insurance_company_10" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 11,edge_encryption_enabled=true" label="Insurance Company 11" max_length="40" name="u_insurance_company_11" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 12,edge_encryption_enabled=true" label="Insurance Company 12" max_length="40" name="u_insurance_company_12" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 13,edge_encryption_enabled=true" label="Insurance Company 13" max_length="40" name="u_insurance_company_13" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 14,edge_encryption_enabled=true" label="Insurance Company 14" max_length="40" name="u_insurance_company_14" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 15,edge_encryption_enabled=true" label="Insurance Company 15" max_length="40" name="u_insurance_company_15" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 16,edge_encryption_enabled=true" label="Insurance Company 16" max_length="40" name="u_insurance_company_16" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 17,edge_encryption_enabled=true" label="Insurance Company 17" max_length="40" name="u_insurance_company_17" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 18,edge_encryption_enabled=true" label="Insurance Company 18" max_length="40" name="u_insurance_company_18" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 19,edge_encryption_enabled=true" label="Insurance Company 19" max_length="40" name="u_insurance_company_19" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 2,edge_encryption_enabled=true" label="Insurance Company 2" max_length="40" name="u_insurance_company_2" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 20,edge_encryption_enabled=true" label="Insurance Company 20" max_length="40" name="u_insurance_company_20" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 21,edge_encryption_enabled=true" label="Insurance Company 21" max_length="40" name="u_insurance_company_21" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 22,edge_encryption_enabled=true" label="Insurance Company 22" max_length="40" name="u_insurance_company_22" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 23,edge_encryption_enabled=true" label="Insurance Company 23" max_length="40" name="u_insurance_company_23" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 24,edge_encryption_enabled=true" label="Insurance Company 24" max_length="40" name="u_insurance_company_24" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 25,edge_encryption_enabled=true" label="Insurance Company 25" max_length="40" name="u_insurance_company_25" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 26,edge_encryption_enabled=true" label="Insurance Company 26" max_length="40" name="u_insurance_company_26" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 27,edge_encryption_enabled=true" label="Insurance Company 27" max_length="40" name="u_insurance_company_27" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 28,edge_encryption_enabled=true" label="Insurance Company 28" max_length="40" name="u_insurance_company_28" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 29,edge_encryption_enabled=true" label="Insurance Company 29" max_length="40" name="u_insurance_company_29" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 3,edge_encryption_enabled=true" label="Insurance Company 3" max_length="40" name="u_insurance_company_3" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 30,edge_encryption_enabled=true" label="Insurance Company 30" max_length="40" name="u_insurance_company_30" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 31,edge_encryption_enabled=true" label="Insurance Company 31" max_length="40" name="u_insurance_company_31" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 32,edge_encryption_enabled=true" label="Insurance Company 32" max_length="40" name="u_insurance_company_32" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 33,edge_encryption_enabled=true" label="Insurance Company 33" max_length="40" name="u_insurance_company_33" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 34,edge_encryption_enabled=true" label="Insurance Company 34" max_length="40" name="u_insurance_company_34" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 35,edge_encryption_enabled=true" label="Insurance Company 35" max_length="40" name="u_insurance_company_35" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 4,edge_encryption_enabled=true" label="Insurance Company 4" max_length="40" name="u_insurance_company_4" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 5,edge_encryption_enabled=true" label="Insurance Company 5" max_length="40" name="u_insurance_company_5" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 6,edge_encryption_enabled=true" label="Insurance Company 6" max_length="40" name="u_insurance_company_6" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 7,edge_encryption_enabled=true" label="Insurance Company 7" max_length="40" name="u_insurance_company_7" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 8,edge_encryption_enabled=true" label="Insurance Company 8" max_length="40" name="u_insurance_company_8" type="string"/>
+        <element attributes="import_attribute_name=Insurance Company 9,edge_encryption_enabled=true" label="Insurance Company 9" max_length="40" name="u_insurance_company_9" type="string"/>
+    </element>
+</database>

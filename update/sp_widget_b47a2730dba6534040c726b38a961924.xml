@@ -2,7 +2,7 @@
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($uibModal, $scope, $window) {
+        <client_script><![CDATA[function($uibModal, $scope, $window, $location) {
 	var c = this;
  
 	c.openModal = function() {
@@ -15,6 +15,32 @@
 	c.closeModal = function() {
 		c.modalInstance.close();
 	}
+	
+	c.submitSearch = function(){
+		var qs = c.options.url;
+		for (var i=0; i < c.data.typeaheads.length; i++){
+			var term = c.data.typeaheads[i].data.searchTerm;
+			if(c.data.typeaheads[i].data.searchTerm){
+				qs += "&" + c.data.typeaheads[i].data.primaryField + "=";
+				qs += (typeof term === 'object') ? term.primary : term;
+			}
+		}
+		$location.url(qs);
+	}
+	
+	//bit hacky but if City has new input then clear Zip
+  //might be better to dispatch an event on each
+	$scope.$watch('c.data.typeaheads[0].data.searchTerm', function (newVal, oldVal) {
+		if(newVal != oldVal && newVal != ""){
+			c.data.typeaheads[1].data.searchTerm = "";
+		}
+	});
+	//bit hacky but if Zip has new input then clear City
+	$scope.$watch('c.data.typeaheads[1].data.searchTerm', function (newVal, oldVal) {
+		if(newVal != oldVal && newVal != ""){
+			c.data.typeaheads[0].data.searchTerm = "";
+		}
+	});
 
 }]]></client_script>
         <controller_as>c</controller_as>
@@ -165,8 +191,9 @@ a.color_box .image-container {
 	//PD doesn't seem as though plain old <widget id="xxx"> allows more than one instance
 	//was getting both widgets with the same options
     var typeahead_options = [
-        {url: options.url, contextual_search_sources: "08d0a3eedbde9b0040c726b38a961904"},
-        {url: options.url, contextual_search_sources: "a0bc552ddb22d34040c726b38a96190e"}
+        {url: options.url, contextual_search_sources: "08d0a3eedbde9b0040c726b38a961904"},//city search source sysid
+        {url: options.url, contextual_search_sources: "a0bc552ddb22d34040c726b38a96190e"},//zip	search source sysid
+				{url: options.url, contextual_search_sources: "7ef85b2edb4423402ecd8a8b3a961942"} //insurer search source sysid
     ];
 
     data.typeaheads = [];
@@ -179,17 +206,15 @@ a.color_box .image-container {
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-06-05 06:01:44</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>b47a2730dba6534040c726b38a961924</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>BH Image Link</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_widget_b47a2730dba6534040c726b38a961924</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-06-07 08:28:00</sys_updated_on>
+        <sys_updated_on>2018-08-27 12:52:34</sys_updated_on>
         <template><![CDATA[<div class="iconlink">
   <!--// Top Icon -->
   <a href="" ng-if="::(options.link_template == 'Top Icon' || !options.link_template)" ng-click="c.openModal()" class="top_icon {{::options.class_name}}" target="{{::data.target}}">

@@ -4,7 +4,7 @@
         <child display_value="SC Catalog Item 2">eaa3d362dbde974082636f048a9619cb</child>
         <cloned>2018-05-29 04:35:52</cloned>
         <last_validated>2018-05-29 04:35:52</last_validated>
-        <parent display_value="SC Catalog Item">0fd6a6f247230200ba13a5554ee490b3</parent>
+        <parent display_value="SC Catalog Item Deprecated">0fd6a6f247230200ba13a5554ee490b3</parent>
         <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, $http, spUtil, nowAttachmentHandler, $rootScope, $sanitize, $window, $sce, i18n, $timeout, $log, spAriaUtil) {
 	var c = this;
 	c.quantity = 1;
@@ -384,13 +384,11 @@
         <sys_class_name>sp_rel_widget_clone</sys_class_name>
         <sys_created_by>chris.corscadden</sys_created_by>
         <sys_created_on>2018-05-29 04:35:52</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>bea31762dbde974082636f048a961969</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>eaa3d362dbde974082636f048a9619cb</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_rel_widget_clone_bea31762dbde974082636f048a961969</sys_update_name>
         <sys_updated_by>chris.corscadden</sys_updated_by>

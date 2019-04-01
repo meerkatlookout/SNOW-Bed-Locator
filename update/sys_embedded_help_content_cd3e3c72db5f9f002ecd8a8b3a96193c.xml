@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>sys-ui</category>
+        <content><![CDATA[ <h1 class="title topictitle1">Welcome page content</h1>  <div class="body conbody">  <p class="p">Configure the welcome page of your instance to provide users with instructions and information   that they may need to use the system efficiently.</p>  <p class="p">Review the default welcome page sections to determine whether the content aligns with your   business needs. </p>  <p class="p">To modify or delete a default welcome page section, click the short description of the section.</p>  <p class="p">To add a new section, click <span class="ph uicontrol">New</span>.</p> </div> <div class="related-links"><div class="relinfo"><div class="reltitle">Related information<br /><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:Welcome-Page-Content&amp;version&#61;kingston" target="_blank">Welcome page content</a></div><div><a class="link" href="https://docs.servicenow.com/?context&#61;CSHelp:Welcome-Page-Sections&amp;version&#61;kingston" target="_blank">Welcome page sections</a></div></div></div></div>]]></content>
+        <last_sync>2019-03-30 05:35:13</last_sync>
+        <modifier>setup</modifier>
+        <name>sys_home_list-setup-company</name>
+        <page>sys_home_list</page>
+        <product>1</product>
+        <qualifier>company</qualifier>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-07-18 05:24:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd3e3c72db5f9f002ecd8a8b3a96193c</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>sys_home_list-setup-company</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_embedded_help_content_cd3e3c72db5f9f002ecd8a8b3a96193c</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-03-30 05:35:13</sys_updated_on>
+        <version>k</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd3e3c72db5f9f002ecd8a8b3a96193c"/>
+</record_update>

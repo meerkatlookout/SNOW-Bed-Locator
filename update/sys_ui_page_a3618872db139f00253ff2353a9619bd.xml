@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_bhrl_hbm_Test Time Macro.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+<html>
+
+
+<table>
+
+
+<th>Hour</th>
+
+
+<th>Minute</th>
+
+
+<th></th>
+
+
+<tr>
+
+
+<!--<td><input type="number" min="0" max="23" id="hours" onChange="validateHours(this.value)"/></td>
+
+
+<td><input type="number" min="0" max="59" id="minutes" onChange="validateMinutes(this.value)"/></td>-->
+
+<td>
+<select id="hours">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>	
+</select>	
+</td>	
+	
+<td>
+<select id="minutes">
+  <option value="00">00</option>
+  <option value="15">15</option>
+  <option value="30">30</option>
+  <option value="45">45</option>
+  <option value="60">60</option>
+</select>	
+</td>
+
+<td>
+<select id="am/pm">
+  <option value="AM">AM</option>
+  <option value="PM">PM</option>
+</select>	
+</td>
+
+
+</tr>
+
+
+</table>
+
+
+</html>
+
+	
+	
+</j:jelly>]]></html>
+        <name>Test Time Macro</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-07-18 01:00:39</sys_created_on>
+        <sys_id>a3618872db139f00253ff2353a9619bd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Test Time Macro</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_ui_page_a3618872db139f00253ff2353a9619bd</sys_update_name>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-07-18 01:07:37</sys_updated_on>
+    </sys_ui_page>
+</record_update>

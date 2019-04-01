@@ -8,12 +8,12 @@
         <glyph/>
         <id/>
         <kb_article/>
-        <kb_category display_value="General">de52a504dbd2d30040c726b38a96191a</kb_category>
+        <kb_category display_value="">de52a504dbd2d30040c726b38a96191a</kb_category>
         <kb_topic/>
         <order>1</order>
         <roles/>
         <sc_cat_item/>
-        <sc_category display_value="Multiple Order">0b3c66c2db069b0040c726b38a9619d3</sc_category>
+        <sc_category display_value="">0b3c66c2db069b0040c726b38a9619d3</sc_category>
         <short_description>Browse helpful articles</short_description>
         <size>md</size>
         <sp_column display_value="2">bd252dfadb061f0040c726b38a961905</sp_column>
@@ -22,20 +22,18 @@
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-17 13:36:45</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>746c9b3edbcedb0082636f048a9619f9</sys_id>
         <sys_mod_count>12</sys_mod_count>
         <sys_name>Knowledge Articles</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_instance_link_746c9b3edbcedb0082636f048a9619f9</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
         <sys_updated_on>2018-05-21 13:19:03</sys_updated_on>
         <title>Knowledge Articles</title>
         <type>kb_category</type>
-        <u_image>3530eb32db021f0082636f048a96191a.iix?t=m</u_image>
+        <u_image/>
         <url/>
         <widget_parameters><![CDATA[{
 	"link_template": {
@@ -44,4 +42,5 @@
 	}
 }]]></widget_parameters>
     </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=746c9b3edbcedb0082636f048a9619f9"/>
 </record_update>

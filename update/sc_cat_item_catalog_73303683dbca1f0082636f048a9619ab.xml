@@ -2,17 +2,15 @@
 <record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
         <sc_cat_item display_value="Total Electric Beds">52aeee03dbca1f0082636f048a9619a2</sc_cat_item>
-        <sc_catalog display_value="Service Request">41755196dbd20300e55436ba7c9619ae</sc_catalog>
+        <sc_catalog display_value="">41755196dbd20300e55436ba7c9619ae</sc_catalog>
         <sys_class_name>sc_cat_item_catalog</sys_class_name>
         <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
         <sys_created_on>2018-05-18 05:02:22</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>73303683dbca1f0082636f048a9619ab</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Service Request.Total Electic Beds</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sc_cat_item_catalog_73303683dbca1f0082636f048a9619ab</sys_update_name>
         <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>

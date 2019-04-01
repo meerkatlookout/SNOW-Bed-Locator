@@ -3,13 +3,16 @@
     <element label="Bed Locator" max_length="40" name="x_bhrl_hbm_bed_locator" type="collection">
         <element label="Bed Location" max_length="32" name="bed_location" reference="cmn_location" reference_qual="x_bhrl_hbm_type=bed location^EQ" reference_qual_condition="x_bhrl_hbm_type=bed location^EQ" type="reference"/>
         <element label="End Date" max_length="40" name="end_date" type="glide_date_time"/>
-        <element label="Facility" max_length="32" name="facility" reference="core_company" type="reference"/>
+        <element label="End Date" max_length="40" name="end_date2" type="glide_date"/>
+        <element label="Facility" max_length="32" name="facility" reference="x_bhrl_hbm_facility" type="reference"/>
         <element label="First Name" max_length="200" name="first_name" type="string"/>
         <element label="Insurance Company" max_length="32" name="insurance_company" reference="x_bhrl_hbm_accepted_health_insurances" type="reference"/>
         <element label="Insurance Reference Number" max_length="200" name="insurance_reference_number" type="string"/>
         <element label="Last Name" max_length="200" name="last_name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Start Date" max_length="40" name="start_date" type="glide_date_time"/>
+        <element label="Start Date" max_length="40" name="start_date2" type="glide_date"/>
+        <element label="Start Time" max_length="40" name="start_time" type="string"/>
         <index name="index">
             <element name="bed_location"/>
         </index>

@@ -14,7 +14,7 @@
         <roles/>
         <sc_cat_item/>
         <sc_category/>
-        <short_description>Find available beds in a Hospice Facility</short_description>
+        <short_description>Find available beds in a Neuro Care Facility</short_description>
         <size>md</size>
         <sp_column display_value="3">bf3a4c62db969b0040c726b38a96193f</sp_column>
         <sp_page/>
@@ -22,18 +22,16 @@
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-28 14:03:41</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>fe0c04e2db969b0040c726b38a9619ca</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Hospice</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Neuro Care</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_instance_link_fe0c04e2db969b0040c726b38a9619ca</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-28 14:04:19</sys_updated_on>
-        <title>Hospice</title>
+        <sys_updated_on>2018-07-06 07:22:47</sys_updated_on>
+        <title>Neuro Care</title>
         <type>page</type>
         <u_image/>
         <url/>
@@ -44,4 +42,5 @@
 	}
 }]]></widget_parameters>
     </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=fe0c04e2db969b0040c726b38a9619ca"/>
 </record_update>

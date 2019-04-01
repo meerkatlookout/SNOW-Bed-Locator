@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>3000</order>
+        <question display_value="Start Time">94c633eadbdf5f00253ff2353a9619e3</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-07-18 01:58:32</sys_created_on>
+        <sys_id>e31fc47adb139f00253ff2353a961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>14:30 PM</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>question_choice_e31fc47adb139f00253ff2353a961923</sys_update_name>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-07-18 01:58:32</sys_updated_on>
+        <text>14:30 PM</text>
+        <value>14:30 PM</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=e31fc47adb139f00253ff2353a961923"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>e31fc47adb139f00253ff2353a961923</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-07-18 01:58:32</sys_created_on>
+        <sys_id>e12fc47adb139f00253ff2353a961946</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-07-18 01:58:32</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>e31fc47adb139f00253ff2353a961923</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-07-18 01:58:32</sys_created_on>
+        <sys_id>a92fc47adb139f00253ff2353a961945</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-07-18 01:58:32</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

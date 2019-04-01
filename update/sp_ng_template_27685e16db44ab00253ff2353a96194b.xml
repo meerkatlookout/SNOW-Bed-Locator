@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_ng_template">
+    <sp_ng_template action="INSERT_OR_UPDATE">
+        <id>bh_bed_locator_search_facility</id>
+        <sp_widget display_value="BH Image Link Facility Search">fc175216db44ab00253ff2353a9619a3</sp_widget>
+        <sys_class_name>sp_ng_template</sys_class_name>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-08-23 05:29:59</sys_created_on>
+        <sys_id>27685e16db44ab00253ff2353a96194b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bh_bed_locator_search_facility</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_ng_template_27685e16db44ab00253ff2353a96194b</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-08-24 01:16:42</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">Refine your search ({{::options.title}})</h4>
+  </div>
+  <div class="panel-body block wrapper-xl">
+
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Facility</label>
+      <div class="col-sm-10">
+        <sp-widget widget="c.data.typeaheads[0]"></sp-widget>
+        
+        <!-- widget id="bh-typeahead-select" options='{"url": options.url, "contextual_search_sources": "08d0a3eedbde9b0040c726b38a961904"  }'></widget -->
+      </div>
+    </div>
+
+  </div>
+  <div class="panel-footer text-right">
+    <button class="btn btn-primary" ng-click="c.closeModal()">${Cancel}</button>
+  </div>
+</div>]]></template>
+    </sp_ng_template>
+</record_update>

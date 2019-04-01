@@ -20,6 +20,7 @@
 	$scope.data.sc_cat_item._fields["IO:fc7193eedb9e974082636f048a961934"].display_value = $scope.data.insurer_name;
 	$scope.data.sc_cat_item._fields["IO:fc7193eedb9e974082636f048a961934"].displayValue = $scope.data.insurer_name;
 	
+	
 	if ($scope.data.sc_cat_item)
 		$scope.data.sc_cat_item.description = $sce.trustAsHtml($scope.data.sc_cat_item.description);
 	c.widget._debugContextMenu = [
@@ -138,7 +139,7 @@
 		$scope.data.sc_cat_item.quantity = c.quantity;
 		if (g_form){
 			g_form.submit();
-			window.location.href = "https://bighouseresourcesdemo1.service-now.com/bms?id=confirm_booking&facility_id=" + $scope.data.facility_id + "&insurer="+$scope.data.insurer;
+			window.location.href = "https://bighouseresourcesptyltdsvsdemo5.service-now.com/bms?id=confirm_booking&facility_id=" + $scope.data.facility_id + "&insurer="+$scope.data.insurer;
 		}
 	}
 
@@ -315,13 +316,15 @@
 	else{ 
 		data.sys_id = $sp.getParameter("sys_id") || $sp.getParameter('sl_sys_id');
 		data.facility_id = $sp.getParameter("facility_id");
-		data.insurer = $sp.getParameter("insurer");
-		var company = new GlideRecord("core_company");
+		data.insurer_name = $sp.getParameter("insurer_name");
+		var facility = new GlideRecord("x_bhrl_hbm_facility");
 		var insurer = new GlideRecord("x_bhrl_hbm_accepted_health_insurances");
-		company.get(data.facility_id);
-		insurer.get(data.insurer);
-		data.facility_name = company.getDisplayValue();
-		data.insurer_name = insurer.getDisplayValue();
+		facility.get(data.facility_id);
+		insurer.get("name", data.insurer_name);
+		data.facility_name = facility.getDisplayValue();
+		data.insurer = insurer.getUniqueValue();
+		console.log(data.insurer);
+		console.log(data.insurer_name)
 	}
 
 	if (!data.sys_id)
@@ -347,17 +350,15 @@
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>chris.corscadden</sys_created_by>
         <sys_created_on>2018-05-29 04:35:52</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>eaa3d362dbde974082636f048a9619cb</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>SC Catalog Item 2</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_widget_eaa3d362dbde974082636f048a9619cb</sys_update_name>
         <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:35:54</sys_updated_on>
+        <sys_updated_on>2018-08-28 03:17:36</sys_updated_on>
         <template><![CDATA[<div id="sc_cat_item" >
   <div class="row" ng-if="::data.sc_cat_item" >
     <div ng-if="::data.sc_cat_item.picture" class="col-sm-3">

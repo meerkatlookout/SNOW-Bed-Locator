@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="09ff3d105f231000b12e3572f2b4775d" table="cmn_location" version="2" view="hospital_list_view">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>e185da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_type</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>6585da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_hospital</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>e585da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_building</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>6985da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_wing</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>e985da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_ward</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>6d85da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_floor</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>ed85da47db4a1f0082636f048a96194b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_bhrl_hbm_room</element>
+            <list_id display_value="cmn_location" element="NULL" name="cmn_location" parent="NULL" relationship="NULL" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="e6355647db4a1f0082636f048a96192e">6d85da47db4a1f0082636f048a96194a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_id>6185da47db4a1f0082636f048a96194c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>cmn_location</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>chris.corscadden</sys_created_by>
+            <sys_created_on>2018-05-18 03:05:38</sys_created_on>
+            <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
+            <sys_domain_path/>
+            <sys_id>6d85da47db4a1f0082636f048a96194a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cmn_location</sys_name>
+            <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+            <sys_update_name>sys_ui_list_cmn_location_hospital_list_view_6d85da47db4a1f0082636f048a96194a</sys_update_name>
+            <sys_updated_by>chris.corscadden</sys_updated_by>
+            <sys_updated_on>2018-05-18 03:05:38</sys_updated_on>
+            <sys_user/>
+            <view display_value="Hospital List View" name="hospital_list_view">e6355647db4a1f0082636f048a96192e</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

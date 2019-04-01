@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_bhrl_hbm.BedLocatorUtil</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>BedLocatorUtil</name>
+        <script><![CDATA[var BedLocatorUtil = Class.create();
+BedLocatorUtil.prototype = {
+    initialize: function() {
+    },
+	
+	refQualAcceptedInsurance: function() { 
+	  gs.info("test");
+	  var answer  = ''; 
+	  gs.info(current.variables.facility);
+	  var facility = current.variables.facility;
+	  var insurance = new GlideRecord('x_bhrl_hbm_accepted_insurer'); 
+	  insurance.addQuery("facility", facility);
+	  insurance.query()
+	  while(insurance.next()){
+		if (answer.length > 0 ) {
+		  answer += (',' + insurance.insurer); } 
+		else { 
+		  answer  = '' + insurance.insurer; } 
+	  } 
+	  gs.info(answer);
+	  return 'sys_idIN' + answer;
+  },
+
+    type: 'BedLocatorUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>chris.corscadden</sys_created_by>
+        <sys_created_on>2018-08-27 04:57:45</sys_created_on>
+        <sys_id>30b7beafdb4c2f00253ff2353a961972</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>BedLocatorUtil</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_script_include_30b7beafdb4c2f00253ff2353a961972</sys_update_name>
+        <sys_updated_by>chris.corscadden</sys_updated_by>
+        <sys_updated_on>2018-08-27 04:58:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

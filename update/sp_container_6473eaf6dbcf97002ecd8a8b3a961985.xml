@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Bed Locator Home - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="bed_locator_home">ae652a52db529b0040c726b38a961956</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-06 02:30:45</sys_created_on>
+        <sys_id>6473eaf6dbcf97002ecd8a8b3a961985</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Bed Locator Home - Container 2</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sp_container_6473eaf6dbcf97002ecd8a8b3a961985</sys_update_name>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-06 02:30:45</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>

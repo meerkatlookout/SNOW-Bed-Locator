@@ -2,12 +2,16 @@
 <database>
     <element label="Accepted Insurer" max_length="40" name="x_bhrl_hbm_accepted_insurer" type="collection">
         <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element label="Facility" max_length="32" name="facility" reference="x_bhrl_hbm_facility" type="reference"/>
         <element label="Insurer" max_length="32" name="insurer" reference="x_bhrl_hbm_accepted_health_insurances" type="reference"/>
         <index name="index">
             <element name="insurer"/>
         </index>
         <index name="index2">
             <element name="company"/>
+        </index>
+        <index name="index3">
+            <element name="facility"/>
         </index>
     </element>
 </database>

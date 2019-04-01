@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="global_search_config_handler=CompanySearchConfig,all_tables.text_index_translations=true" create_roles="user_admin" label="Company" max_length="40" name="core_company" text_index="true" type="collection">
+        <element choice="3" default="1" label="Status" max_length="40" name="x_bhrl_hbm_status" type="choice">
+            <choice>
+                <element label="Draft" sequence="1" value="1"/>
+                <element label="Submitted" sequence="2" value="2"/>
+                <element label="Awaiting Approval" sequence="3" value="3"/>
+                <element label="Active" sequence="4" value="4"/>
+                <element label="Inactive" sequence="5" value="5"/>
+            </choice>
+        </element>
+    </element>
+</database>

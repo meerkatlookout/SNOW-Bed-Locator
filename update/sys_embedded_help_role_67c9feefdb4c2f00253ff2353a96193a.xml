@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_bhrl_hbm.facility_type_user" name="x_bhrl_hbm.facility_type_user">e3c9feefdb4c2f00253ff2353a961938</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>shivam.chopra</sys_created_by>
+        <sys_created_on>2018-08-27 05:06:40</sys_created_on>
+        <sys_id>67c9feefdb4c2f00253ff2353a96193a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>e3c9feefdb4c2f00253ff2353a961938</sys_name>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_embedded_help_role_67c9feefdb4c2f00253ff2353a96193a</sys_update_name>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-08-27 05:06:40</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

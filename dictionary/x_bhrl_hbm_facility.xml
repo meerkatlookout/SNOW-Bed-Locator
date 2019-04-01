@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Facility" max_length="40" name="x_bhrl_hbm_facility" type="collection">
+        <element label="Banner Image" max_length="40" name="banner_image" type="user_image"/>
+        <element label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element label="Facility Care Type" max_length="4000" name="facility_care_type" reference="x_bhrl_hbm_care_type" type="glide_list"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element display="true" label="Name" max_length="200" name="name" type="string"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element label="Draft" sequence="1" value="1"/>
+                <element label="Submitted" sequence="2" value="2"/>
+                <element label="Awaiting Approval" sequence="3" value="3"/>
+                <element label="Active" sequence="4" value="4"/>
+                <element label="Inactive" sequence="5" value="5"/>
+            </choice>
+        </element>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Facility" value="Facility"/>
+                <element label="Hospital" value="Hospital"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="company"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

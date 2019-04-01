@@ -2,10 +2,10 @@
 <record_update table="sp_portal">
     <sp_portal action="INSERT_OR_UPDATE">
         <css_variables/>
-        <default>true</default>
+        <default>false</default>
         <homepage display_value="bed_locator_home">ae652a52db529b0040c726b38a961956</homepage>
         <icon/>
-        <kb_knowledge_base display_value="Bed Locator">9911a1c0dbd2d30040c726b38a961976</kb_knowledge_base>
+        <kb_knowledge_base display_value="">9911a1c0dbd2d30040c726b38a961976</kb_knowledge_base>
         <kb_knowledge_page/>
         <login_page display_value="login">6995a144cb11120000f8d856634c9c25</login_page>
         <logo/>
@@ -14,33 +14,31 @@
         <sc_catalog display_value="Bighouse Bed Locator">f67f7f4cdbdad30040c726b38a961941</sc_catalog>
         <sc_catalog_page/>
         <sc_category_page/>
-        <sp_chat_queue display_value="Customer Service">4bc7a3f3c31331001c845cb981d3ae44</sp_chat_queue>
-        <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sp_chat_queue display_value="Bed Locator Customer Service">9309e546db0757002ecd8a8b3a9619f7</sp_chat_queue>
+        <sp_rectangle_menu display_value="Bed Locator Header Menu">b897cd0edb8357002ecd8a8b3a9619c9</sp_rectangle_menu>
         <sqanda_knowledge_base/>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-17 01:32:17</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>71c578b6db821f0040c726b38a961900</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Bighouse Hospital Bed Manager</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_portal_71c578b6db821f0040c726b38a961900</sys_update_name>
-        <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-28 06:44:55</sys_updated_on>
+        <sys_updated_by>jason.burns</sys_updated_by>
+        <sys_updated_on>2019-03-05 10:14:09</sys_updated_on>
         <theme display_value="Hospital Bed Manager">2bd7f03adb821f0040c726b38a9619ac</theme>
         <title>Bighouse Hospital Bed Manager</title>
         <url_suffix>bms</url_suffix>
     </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=71c578b6db821f0040c726b38a961900"/>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#78a7cd</average_image_color>
         <chunk_size_bytes>734003</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
-        <encryption_context/>
         <file_name>icon</file_name>
         <image_height>146</image_height>
         <image_width>263</image_width>
@@ -48,8 +46,6 @@
         <size_compressed>31380</size_compressed>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-17 14:32:39</sys_created_on>
-        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
-        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
         <sys_id>2b29eb72db421f0082636f048a961961</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>paul.douglas</sys_updated_by>
@@ -80,7 +76,6 @@
         <chunk_size_bytes>734003</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
-        <encryption_context/>
         <file_name>logo</file_name>
         <image_height>146</image_height>
         <image_width>263</image_width>
@@ -88,8 +83,6 @@
         <size_compressed>31380</size_compressed>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-17 14:32:32</sys_created_on>
-        <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
-        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
         <sys_id>75292b72db421f0082636f048a961931</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>paul.douglas</sys_updated_by>

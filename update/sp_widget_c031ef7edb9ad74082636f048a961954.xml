@@ -7,7 +7,60 @@
   var c = this;
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.form-check{
+  margin-top:2em;
+}
+
+label{
+	position: relative;
+	cursor: pointer;
+	color: #000;
+  font-weight:bold;
+  font-size:1.2em;
+}
+
+input[type="checkbox"]{
+	position: absolute;
+	right: 9000px;
+}
+
+/*Check box*/
+input[type="checkbox"] + .label-text:before{
+	content: "\f096";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + .label-text:before{
+	content: "\f14a";
+	color: #2980b9;
+	animation: effect 250ms ease-in;
+}
+
+input[type="checkbox"]:disabled + .label-text{
+	color: #aaa;
+}
+
+input[type="checkbox"]:disabled + .label-text:before{
+	content: "\f0c8";
+	color: #ccc;
+}
+
+@keyframes effect{
+	0%{transform: scale(0);}
+	25%{transform: scale(1.3);}
+	75%{transform: scale(1.4);}
+	100%{transform: scale(1);}
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -35,28 +88,37 @@
 		facility.get(facility_id);
 		data.facility = gr.getDisplayValue("facility");
 		data.phone = facility.getDisplayValue("phone");
-		data.created = gr.getDisplayValue("sys_created_on");
+		//data.created = gr.getDisplayValue("sys_created_on");
+		//var dateSection = gr.start_date.split(' ')[0]; //Gets the Date
+    //var timeSection = gr.start_date.split(' ')[1]; //Gets the Time
+		//var output = new Packages.java.text.SimpleDateFormat("MM/dd/yyyy");
+		var startDate = gr.start_date2.getDisplayValue();
+		//rdt = temp.parse(rdt);
+		//startDate = output.format(sDate);
+		
+		data.created = startDate;// gr.getValue("start_date2");
+		data.startTime = gr.getValue("start_time")
 		data.first_name = gr.getValue("first_name");
 		data.last_name = gr.getValue("last_name");
 		data.insurance = gr.getDisplayValue("insurance_company");
 		data.street = facility.getDisplayValue("street");
 	}
+	
+	data.portal = $sp.getValue('url_suffix');
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>chris.corscadden</sys_created_by>
         <sys_created_on>2018-05-30 00:13:50</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c031ef7edb9ad74082636f048a961954</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Confirm booking</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_widget_c031ef7edb9ad74082636f048a961954</sys_update_name>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:36</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-08-24 00:18:39</sys_updated_on>
         <template><![CDATA[<div class="panel panel-{{::options.color}} b wrapper-lg text-center">
 <!-- your widget template -->
   <h1>CONFIRMED BOOKING</h1>
@@ -66,7 +128,7 @@
   <p>If you have any further requirements or questions please contact the facility directly on  {{data.phone}}</p>
 
 
-  <p>Confirmed Date: {{data.created}}</p>
+  <p>Confirmed Start Date: {{data.created}} {{data.startTime}}</p>
 
   <p>{{data.first_name}} {{data.last_name}}</p>
 
@@ -76,6 +138,18 @@
   </div>
 
   <p>{{data.insurance}}</p>
+  
+  <div class="form-check">
+    <label>
+      <input type="checkbox" name="check"> <span class="label-text">Medical records have been transferred</span>
+    </label>
+  </div>
+  
+  <p>&nbsp;</p>
+  
+  <p>
+    <a ng-href="/{{data.portal}}">« Return to Bed Locator Home</a>
+  </p>
 
 </div>]]></template>
     </sp_widget>

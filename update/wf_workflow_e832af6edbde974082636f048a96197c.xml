@@ -2,7 +2,7 @@
 <record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"activities":{},"subflows":[],"stages":{},"ends":["5f9867b6dbdad74082636f048a961963"]}</activity_stages>
+        <activity_stages>{"activities":{},"ends":["03e411c6dbc357002ecd8a8b3a9619c5"],"subflows":[],"stages":{}}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -12,10 +12,10 @@
         </condition>
         <condition_type>run_match</condition_type>
         <description/>
-        <expected_sequences>d39867b6dbdad74082636f048a961965,d79867b6dbdad74082636f048a961966,d79867b6dbdad74082636f048a961968,5f9867b6dbdad74082636f048a961963</expected_sequences>
+        <expected_sequences>cbe411c6dbc357002ecd8a8b3a9619c5,07e411c6dbc357002ecd8a8b3a9619c6,4be4d1c6dbc357002ecd8a8b3a96190f,03e411c6dbc357002ecd8a8b3a9619c5</expected_sequences>
         <expected_time>1970-01-01 14:00:00</expected_time>
         <expected_time_type/>
-        <full_sequences>d39867b6dbdad74082636f048a961965,d79867b6dbdad74082636f048a961966,d79867b6dbdad74082636f048a961968,5f9867b6dbdad74082636f048a961963</full_sequences>
+        <full_sequences>cbe411c6dbc357002ecd8a8b3a9619c5,07e411c6dbc357002ecd8a8b3a9619c6,4be4d1c6dbc357002ecd8a8b3a96190f,03e411c6dbc357002ecd8a8b3a9619c5</full_sequences>
         <journal/>
         <max_activity_count>100</max_activity_count>
         <name>Bed Locator Workflow</name>
@@ -30,13 +30,13 @@
         <schedule/>
         <stage_field/>
         <stage_order>computed</stage_order>
-        <start display_value="Begin">d39867b6dbdad74082636f048a961965</start>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>5b9867b6dbdad74082636f048a961961</sys_id>
+        <start display_value="Begin">cbe411c6dbc357002ecd8a8b3a9619c5</start>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>4fe411c6dbc357002ecd8a8b3a9619c3</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>damien.hanel</sys_updated_by>
-        <sys_updated_on>2018-05-30 01:05:43</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 15:11:38</sys_updated_on>
         <table>x_bhrl_hbm_bed_locator</table>
         <timezone/>
         <validated>true</validated>
@@ -50,16 +50,14 @@
         <sys_class_name>wf_workflow</sys_class_name>
         <sys_created_by>chris.corscadden</sys_created_by>
         <sys_created_on>2018-05-29 05:39:21</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
-        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>e832af6edbde974082636f048a96197c</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Bed Locator Workflow</sys_name>
         <sys_overrides/>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>wf_workflow_e832af6edbde974082636f048a96197c</sys_update_name>
         <sys_updated_by>chris.corscadden</sys_updated_by>
@@ -83,22 +81,22 @@
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d39867b6dbdad74082636f048a961965</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cbe411c6dbc357002ecd8a8b3a9619c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Bed Locator Workflow">5b9867b6dbdad74082636f048a961961</workflow_version>
+        <workflow_version display_value="Bed Locator Workflow">4fe411c6dbc357002ecd8a8b3a9619c3</workflow_version>
         <x>20</x>
         <y>20</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=d39867b6dbdad74082636f048a961965"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cbe411c6dbc357002ecd8a8b3a9619c5"/>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Begin">d39867b6dbdad74082636f048a961965</activity>
+        <activity display_value="Begin">cbe411c6dbc357002ecd8a8b3a9619c5</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -111,12 +109,12 @@
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9f9867b6dbdad74082636f048a961965</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>8fe411c6dbc357002ecd8a8b3a9619c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Notification">0a6c97790a0a0b2756919eb960284334</activity_definition>
@@ -133,88 +131,88 @@
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d79867b6dbdad74082636f048a961968</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>4be4d1c6dbc357002ecd8a8b3a96190f</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:46:05</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:52</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Bed Locator Workflow">5b9867b6dbdad74082636f048a961961</workflow_version>
+        <workflow_version display_value="Bed Locator Workflow">4fe411c6dbc357002ecd8a8b3a9619c3</workflow_version>
         <x>771</x>
         <y>145</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=d79867b6dbdad74082636f048a961968"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4be4d1c6dbc357002ecd8a8b3a96190f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>179867b6dbdad74082636f048a961982</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>0be4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>Bed Locator Confirmed Booking</value>
         <variable display_value="">c35db2180a0a0ba96248a709d1b6df20</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>500</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>539867b6dbdad74082636f048a961982</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>47e4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.&#13;
 </value>
         <variable display_value="">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
-        <order>150</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9b9867b6dbdad74082636f048a961982</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <value/>
-        <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9f9867b6dbdad74082636f048a961981</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>83e4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>0</value>
         <variable display_value="">6d6816cd0a6a803f0853a8df38007572</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>8fe4d1c6dbc357002ecd8a8b3a961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
+        <value/>
+        <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d79867b6dbdad74082636f048a961982</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:46:05</sys_updated_on>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cbe4d1c6dbc357002ecd8a8b3a961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>CONFIRMED BOOKING​&#13;
 &#13;
 ​${facility} has received your bed placement request.​&#13;
@@ -235,71 +233,71 @@ ${insurance_company}&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>db9867b6dbdad74082636f048a961981</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <value>5b77d1b0db636200b6a7752dbf961961,95eca368db6b7240b6a7752dbf9619bc,9905f4dfdb128300e55436ba7c9619ae</value>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cfe4d1c6dbc357002ecd8a8b3a96190f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:52</sys_updated_on>
+        <value>6408f121dbc317002ecd8a8b3a961989,fcb3d586dbc357002ecd8a8b3a961992,93045986dbc357002ecd8a8b3a9619f6</value>
         <variable display_value="">c35daa890a0a0ba96248a709c32994d6</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>100</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>db9867b6dbdad74082636f048a961981</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <value>5b77d1b0db636200b6a7752dbf961961,95eca368db6b7240b6a7752dbf9619bc,9905f4dfdb128300e55436ba7c9619ae</value>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cfe4d1c6dbc357002ecd8a8b3a96190f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:52</sys_updated_on>
+        <value>6408f121dbc317002ecd8a8b3a961989,fcb3d586dbc357002ecd8a8b3a961992,93045986dbc357002ecd8a8b3a9619f6</value>
         <variable display_value="">c35daa890a0a0ba96248a709c32994d6</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>150</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9b9867b6dbdad74082636f048a961982</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>8fe4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value/>
         <variable display_value="">ae2121c70a0a0b3459708c9a60cd7312</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>200</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>179867b6dbdad74082636f048a961982</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>0be4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>Bed Locator Confirmed Booking</value>
         <variable display_value="">c35db2180a0a0ba96248a709d1b6df20</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>300</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d79867b6dbdad74082636f048a961982</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:46:05</sys_updated_on>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cbe4d1c6dbc357002ecd8a8b3a961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>CONFIRMED BOOKING​&#13;
 &#13;
 ​${facility} has received your bed placement request.​&#13;
@@ -320,35 +318,35 @@ ${insurance_company}&#13;
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>400</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9f9867b6dbdad74082636f048a961981</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>83e4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>0</value>
         <variable display_value="">6d6816cd0a6a803f0853a8df38007572</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961968</document_key>
+        <document_key>4be4d1c6dbc357002ecd8a8b3a96190f</document_key>
         <order>500</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>539867b6dbdad74082636f048a961982</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>47e4d1c6dbc357002ecd8a8b3a961910</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.&#13;
 </value>
         <variable display_value="">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Email">d79867b6dbdad74082636f048a961968</activity>
+        <activity display_value="Email">4be4d1c6dbc357002ecd8a8b3a96190f</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -361,12 +359,12 @@ ${insurance_company}&#13;
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>939867b6dbdad74082636f048a961983</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>07e4d1c6dbc357002ecd8a8b3a961911</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
     </wf_condition>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
@@ -383,20 +381,20 @@ ${insurance_company}&#13;
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>5f9867b6dbdad74082636f048a961963</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>03e411c6dbc357002ecd8a8b3a9619c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width>80</width>
-        <workflow_version display_value="Bed Locator Workflow">5b9867b6dbdad74082636f048a961961</workflow_version>
+        <workflow_version display_value="Bed Locator Workflow">4fe411c6dbc357002ecd8a8b3a9619c3</workflow_version>
         <x>817</x>
         <y>342</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=5f9867b6dbdad74082636f048a961963"/>
+    <sys_variable_value action="delete_multiple" query="document_key=03e411c6dbc357002ecd8a8b3a9619c5"/>
     <wf_activity action="INSERT_OR_UPDATE">
         <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
         <activity_definition_updated>false</activity_definition_updated>
@@ -412,31 +410,31 @@ ${insurance_company}&#13;
         <pinned>false</pinned>
         <pinned_version/>
         <stage/>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d79867b6dbdad74082636f048a961966</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>07e411c6dbc357002ecd8a8b3a9619c6</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <timeout>1970-01-01 00:00:00</timeout>
         <vars/>
         <width/>
-        <workflow_version display_value="Bed Locator Workflow">5b9867b6dbdad74082636f048a961961</workflow_version>
+        <workflow_version display_value="Bed Locator Workflow">4fe411c6dbc357002ecd8a8b3a9619c3</workflow_version>
         <x>455</x>
         <y>52</y>
     </wf_activity>
-    <sys_variable_value action="delete_multiple" query="document_key=d79867b6dbdad74082636f048a961966"/>
+    <sys_variable_value action="delete_multiple" query="document_key=07e411c6dbc357002ecd8a8b3a9619c6"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961966</document_key>
+        <document_key>07e411c6dbc357002ecd8a8b3a9619c6</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>5f9867b6dbdad74082636f048a961966</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cfe4d1c6dbc357002ecd8a8b3a96190e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>var company = new GlideRecord("core_company")&#13;
 company.get(current.facility);&#13;
 total = company.getValue("u_beds_available");&#13;
@@ -446,15 +444,15 @@ company.update();</value>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>wf_activity</document>
-        <document_key>d79867b6dbdad74082636f048a961966</document_key>
+        <document_key>07e411c6dbc357002ecd8a8b3a9619c6</document_key>
         <order>1</order>
         <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>5f9867b6dbdad74082636f048a961966</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cfe4d1c6dbc357002ecd8a8b3a96190e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
         <value>var company = new GlideRecord("core_company")&#13;
 company.get(current.facility);&#13;
 total = company.getValue("u_beds_available");&#13;
@@ -463,7 +461,7 @@ company.update();</value>
         <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
     </sys_variable_value>
     <wf_condition action="INSERT_OR_UPDATE">
-        <activity display_value="Update beds available">d79867b6dbdad74082636f048a961966</activity>
+        <activity display_value="Update beds available">07e411c6dbc357002ecd8a8b3a9619c6</activity>
         <condition>true</condition>
         <condition_default/>
         <condition_type>standard</condition_type>
@@ -476,59 +474,59 @@ company.update();</value>
         <order>0</order>
         <short_description/>
         <skip_during_generate>false</skip_during_generate>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>9f9867b6dbdad74082636f048a961967</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>c3e4d1c6dbc357002ecd8a8b3a96190f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
     </wf_condition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">9f9867b6dbdad74082636f048a961967</condition>
-        <from display_value="Update beds available">d79867b6dbdad74082636f048a961966</from>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>1b9867b6dbdad74082636f048a961984</sys_id>
+        <condition display_value="Always">c3e4d1c6dbc357002ecd8a8b3a96190f</condition>
+        <from display_value="Update beds available">07e411c6dbc357002ecd8a8b3a9619c6</from>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>0be4d1c6dbc357002ecd8a8b3a961912</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <to display_value="Email">d79867b6dbdad74082636f048a961968</to>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
+        <to display_value="Email">4be4d1c6dbc357002ecd8a8b3a96190f</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">939867b6dbdad74082636f048a961983</condition>
-        <from display_value="Email">d79867b6dbdad74082636f048a961968</from>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>d39867b6dbdad74082636f048a961985</sys_id>
+        <condition display_value="Always">8fe411c6dbc357002ecd8a8b3a9619c5</condition>
+        <from display_value="Begin">cbe411c6dbc357002ecd8a8b3a9619c5</from>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>47e4d1c6dbc357002ecd8a8b3a961912</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <to display_value="End">5f9867b6dbdad74082636f048a961963</to>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
+        <to display_value="Update beds available">07e411c6dbc357002ecd8a8b3a9619c6</to>
     </wf_transition>
     <wf_transition action="INSERT_OR_UPDATE">
-        <condition display_value="Always">9f9867b6dbdad74082636f048a961965</condition>
-        <from display_value="Begin">d39867b6dbdad74082636f048a961965</from>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>db9867b6dbdad74082636f048a961985</sys_id>
+        <condition display_value="Always">07e4d1c6dbc357002ecd8a8b3a961911</condition>
+        <from display_value="Email">4be4d1c6dbc357002ecd8a8b3a96190f</from>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cbe4d1c6dbc357002ecd8a8b3a961912</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <to display_value="Update beds available">d79867b6dbdad74082636f048a961966</to>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
+        <to display_value="End">03e411c6dbc357002ecd8a8b3a9619c5</to>
     </wf_transition>
     <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
         <estimated_run_time/>
         <no_of_data_points>1</no_of_data_points>
         <percentage_threshold_ert>20</percentage_threshold_ert>
-        <sys_created_by>chris.corscadden</sys_created_by>
-        <sys_created_on>2018-05-30 00:45:52</sys_created_on>
-        <sys_id>5f9867b6dbdad74082636f048a961961</sys_id>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-03 12:52:14</sys_created_on>
+        <sys_id>cfe411c6dbc357002ecd8a8b3a9619c3</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-30 00:45:52</sys_updated_on>
-        <workflow_version display_value="Bed Locator Workflow">5b9867b6dbdad74082636f048a961961</workflow_version>
+        <sys_updated_by>paul.douglas</sys_updated_by>
+        <sys_updated_on>2018-07-03 12:52:14</sys_updated_on>
+        <workflow_version display_value="Bed Locator Workflow">4fe411c6dbc357002ecd8a8b3a9619c3</workflow_version>
     </wf_estimated_runtime_config>
-    <wf_workflow_version action="update_multiple" query="workflow=e832af6edbde974082636f048a96197c^sys_id!=5b9867b6dbdad74082636f048a961961">
+    <wf_workflow_version action="update_multiple" query="workflow=e832af6edbde974082636f048a96197c^sys_id!=4fe411c6dbc357002ecd8a8b3a9619c3">
         <published>false</published>
     </wf_workflow_version>
 </record_update>

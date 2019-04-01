@@ -17,13 +17,17 @@
   text-transform:uppercase;
 }*/
 
+.navbar-brand img, .navbar-brand span{
+    display:none !important;
+}
+
 /* HAck to have large logo on home page */
 @media (min-width: 768px){
   body .padding-top{
-    padding-top:90px;
+    padding-top:20px;
   }
   
-  .v8e9c696bdb5ac30010ccfcc9bf961979 .navbar-brand img, .v8e9c696bdb5ac30010ccfcc9bf961979 .navbar-brand span{
+  .navbar-brand img, .navbar-brand span{
     margin:0 !important;
     max-width:none !important;
     max-height:none !important;
@@ -31,6 +35,7 @@
     top: 20px !important;
     transform:none !important;
     -webkit-transform:none !important;
+    display:none !important;
   }
  
 }
@@ -64,17 +69,16 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-28 06:35:18</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>ae652a52db529b0040c726b38a961956</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>bed_locator_home</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_page_ae652a52db529b0040c726b38a961956</sys_update_name>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-29 06:17:02</sys_updated_on>
+        <sys_updated_on>2018-07-06 02:16:52</sys_updated_on>
         <title>Bed Locator Home</title>
     </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae652a52db529b0040c726b38a961956"/>
 </record_update>

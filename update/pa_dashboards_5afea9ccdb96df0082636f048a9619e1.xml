@@ -12,27 +12,25 @@
         <no_tabs>false</no_tabs>
         <order/>
         <owner display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</owner>
-        <restrict_to_roles/>
+        <restrict_to_roles>pa_viewer,pa_contributor</restrict_to_roles>
         <role_override>true</role_override>
         <roles/>
-        <should_migrate_permissions>true</should_migrate_permissions>
+        <should_migrate_permissions>false</should_migrate_permissions>
         <sys_class_name>pa_dashboards</sys_class_name>
         <sys_created_by>pratik.parekh</sys_created_by>
         <sys_created_on>2018-05-21 02:51:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>09ff3d105f231000b12e3572f2b4775d</sys_domain>
-        <sys_domain_path>!!!/!!#/!!!/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>5afea9ccdb96df0082636f048a9619e1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Hospital</sys_name>
         <sys_overrides/>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>pa_dashboards_5afea9ccdb96df0082636f048a9619e1</sys_update_name>
-        <sys_updated_by>chris.corscadden</sys_updated_by>
-        <sys_updated_on>2018-05-21 03:04:31</sys_updated_on>
+        <sys_updated_by>jason.burns</sys_updated_by>
+        <sys_updated_on>2018-07-16 23:59:18</sys_updated_on>
         <users/>
         <visible_to>2</visible_to>
     </pa_dashboards>

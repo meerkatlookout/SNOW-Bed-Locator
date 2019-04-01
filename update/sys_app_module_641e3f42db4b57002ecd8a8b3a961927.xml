@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Big House Bed Locator">e7ccdc76db86db0082636f048a961935</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>List of Companies marked with a Facility Type</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Facilities</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_bhrl_hbm_facility</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>paul.douglas</sys_created_by>
+        <sys_created_on>2018-07-04 01:12:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>641e3f42db4b57002ecd8a8b3a961927</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Facilities</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
+        <sys_update_name>sys_app_module_641e3f42db4b57002ecd8a8b3a961927</sys_update_name>
+        <sys_updated_by>chris.corscadden</sys_updated_by>
+        <sys_updated_on>2018-08-24 05:25:32</sys_updated_on>
+        <timeline_page/>
+        <title>Facilities</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="IMP Bed Locator" max_length="40" name="x_bhrl_hbm_imp_bed_locator" type="collection">
+        <element attributes="import_attribute_name=bed_location,edge_encryption_enabled=true" label="bed_location" max_length="40" name="u_bed_location" type="string"/>
+        <element attributes="import_attribute_name=end_date,edge_encryption_enabled=true" label="end_date" max_length="40" name="u_end_date" type="string"/>
+        <element attributes="import_attribute_name=facility,edge_encryption_enabled=true" label="facility" max_length="40" name="u_facility" type="string"/>
+        <element attributes="import_attribute_name=first_name,edge_encryption_enabled=true" label="first_name" max_length="40" name="u_first_name" type="string"/>
+        <element attributes="import_attribute_name=insurance_company,edge_encryption_enabled=true" label="insurance_company" max_length="40" name="u_insurance_company" type="string"/>
+        <element attributes="import_attribute_name=insurance_reference_number,edge_encryption_enabled=true" label="insurance_reference_number" max_length="40" name="u_insurance_reference_number" type="string"/>
+        <element attributes="import_attribute_name=last_name,edge_encryption_enabled=true" label="last_name" max_length="40" name="u_last_name" type="string"/>
+        <element attributes="import_attribute_name=number,edge_encryption_enabled=true" label="number" max_length="40" name="u_number" type="string"/>
+        <element attributes="import_attribute_name=start_date,edge_encryption_enabled=true" label="start_date" max_length="40" name="u_start_date" type="string"/>
+        <element attributes="import_attribute_name=sys_created_by,edge_encryption_enabled=true" label="sys_created_by" max_length="40" name="u_sys_created_by" type="string"/>
+        <element attributes="import_attribute_name=sys_created_on,edge_encryption_enabled=true" label="sys_created_on" max_length="40" name="u_sys_created_on" type="string"/>
+        <element attributes="import_attribute_name=sys_id,edge_encryption_enabled=true" label="sys_id" max_length="40" name="u_sys_id" type="string"/>
+        <element attributes="import_attribute_name=sys_mod_count,edge_encryption_enabled=true" label="sys_mod_count" max_length="40" name="u_sys_mod_count" type="string"/>
+        <element attributes="import_attribute_name=sys_tags,edge_encryption_enabled=true" label="sys_tags" max_length="40" name="u_sys_tags" type="string"/>
+        <element attributes="import_attribute_name=sys_updated_by,edge_encryption_enabled=true" label="sys_updated_by" max_length="40" name="u_sys_updated_by" type="string"/>
+        <element attributes="import_attribute_name=sys_updated_on,edge_encryption_enabled=true" label="sys_updated_on" max_length="40" name="u_sys_updated_on" type="string"/>
+    </element>
+</database>

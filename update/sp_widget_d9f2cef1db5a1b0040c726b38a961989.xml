@@ -2,13 +2,18 @@
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function($scope) {
+        <client_script><![CDATA[function($uibModal, $scope) {
   /* widget controller */
   var c = this;
 	
+	var page_id = 'lkjldkf';// this.location.href;
+	//c.data.facility_namex = page_id;
+	//c.showDetails("8a190772db43d7002ecd8a8b3a96199a", true);
+	//alert()
+	
 	c.showDetails = function(facility_id, bolBroadcast) {
 		addClass(document.getElementById("facility_detail"), 'show');
-		
+		//alert('Facility_id: ' + facility_id);
 		if(bolBroadcast) $rootScope.$broadcast('showMapDetail', facility_id);//tell map to react
 		
 		c.data.facility_id = facility_id;
@@ -21,10 +26,72 @@
 		removeClass(document.getElementById("facility_detail"), 'show');
 	}
 	
-	
 	$scope.$on('showFacilityDetail', function (event, data) {
 		c.showDetails(data, false);//facility sys_id broadcast from Map
 	});
+	
+	c.redirect = function(sys_id, insurer_name, selected, care_type, selected_type){
+		if(insurer_name == null && selected == ""){
+			c.openInsuranceModal();
+		} else if(care_type == null && !selected_type){
+			c.openTypeModal();
+		} else{
+/*		  if(insurer_name == "" || insurer_name == null){
+			  window.location = "?id=sc_cat_item_2&sys_id=4d0f0a2edbda974082636f048a9619f0&facility_id=" + sys_id + "&insurer_name="+selected;
+		  }
+		  else{
+			  window.location = "?id=sc_cat_item_2&sys_id=4d0f0a2edbda974082636f048a9619f0&facility_id=" + sys_id + "&insurer_name="+insurer_name;
+		  }*/
+			
+			//check if the selected (insurer) or selected_type have been selected which will override any previous care_type passed in on querystring
+			window.location = "?id=sc_cat_item_2&sys_id=4d0f0a2edbda974082636f048a9619f0&facility_id=" + sys_id +
+				"&insurer_name=" + ((selected == "" || selected == null) ? insurer_name : selected) +
+				"&care_type=" + ((selected_type == "" || selected_type == null) ? care_type : selected_type);
+		}
+	}
+	
+	c.selectInsurer = function(name, index){
+	  c.data.selected = name;
+	  c.data.selectedIndex = index;
+	}
+	
+	c.selectFacilityType = function(name, index){
+	  c.data.selectedType = name;
+	  c.data.selectedTypeIndex = index;
+	}
+	
+	c.show = function(index){
+		if(c.data.search == ""){
+			return true;
+		}
+		else{
+			var str = c.data.insurers[index].name.toLowerCase();
+			var search = c.data.search.toLowerCase();
+			if(str.indexOf(search) > -1)
+				return true;
+			else
+				return false;
+		}
+		
+	}
+	
+	c.openInsuranceModal = function() {
+		c.modalInstance = $uibModal.open({
+			templateUrl: 'notifyInsuranceTemplate',
+			scope: $scope
+		});
+	}
+	
+	c.openTypeModal = function() {
+		c.modalInstance = $uibModal.open({
+			templateUrl: 'notifyTypeTemplate',
+			scope: $scope
+		});
+	}
+ 
+	c.closeModal = function() {
+		c.modalInstance.close();
+	}
 	
 	
 	/*function toggleClass(elem, className) {
@@ -91,6 +158,17 @@
   opacity: 1;
 }
 
+.facility-num{
+  padding-right: 10px;
+  width: 40px;
+  margin-left:-5px;
+}
+
+.insurers{
+  max-height: 170px;
+  overflow-y: auto;
+}
+  
 a.panel-body.block:hover {
     background: #eee;
 }
@@ -113,7 +191,7 @@ a.panel-body.block:hover {
 }
 
 .wrapper.bg{
-  background:#4285f4;
+  background:#4c4a76;
   color:#fff;
 }
 
@@ -124,6 +202,10 @@ a.panel-body.block:hover {
 .wrapper.instr{
   background:#eee;
   color:#000;
+}
+
+.selected{
+  background:#ccc;
 }
 
 ol li a{
@@ -140,8 +222,8 @@ ol li a:hover{
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
-        <id>facilities_list</id>
+        <has_preview>true</has_preview>
+        <id>facilities-list</id>
         <internal>false</internal>
         <link/>
         <name>Facilities List</name>
@@ -149,27 +231,158 @@ ol li a:hover{
         <public>false</public>
         <roles/>
         <script><![CDATA[(function($sp, input, data, options) {
+	var facilityName = $sp.getParameter("name");
+	data.facility_name = facilityName;
+	var insurerName = $sp.getParameter("insurer_name");
+	data.insurer_name = insurerName;
+	data.search = "";
+	data.selected = "";
+	data.selectedIndex = "-1";
 	
-	//client script showDetails
-	if (input && input.facility_id) {
-		//retrieve facility detail
-			var gr_facility = new GlideRecord('core_company');
-			gr_facility.addQuery('sys_id', input.facility_id);
+	
+	data.getBedAvailability = function(sys_id, type){
+		//type is now the type sys_id not type name
+		var count = new GlideAggregate('x_bhrl_hbm_hospital_bed');
+		count.addQuery('install_status',1);
+		
+		count.addQuery('facility', sys_id);
+//		if(data.facility_name == null){
+		count.addQuery('care_type', type);
+//		}
+		count.addAggregate('COUNT','care_type');
+
+		count.query();
+		var typeCount = 0;
+		while(count.next()){
+		  typeCount = count.getAggregate('COUNT','care_type');
+		}
+		return typeCount
+	};
+	
+	
+	/*if(data.facility_name != null && !input){
+		data.myType = "facility_name";
+		data.list = [];
+		
+			var gr_facility = new GlideRecord('x_bhrl_hbm_facility');
+			gr_facility.addQuery('name', 'CONTAINS', data.facility_name);
 			gr_facility.query();
 			while (gr_facility.next()) {
+				var company = gr_facility.company.getRefRecord();				
+				var record = {};
+				record.name = gr_facility.getDisplayValue();
+				record.city = gr_facility.location.getRefRecord().getValue('city');
+				record.picture = gr_facility.getDisplayValue('banner_image');
+				record.street = gr_facility.getDisplayValue('location');
+//				data.zip = gr_facility.getValue('location.zip');
+//				data.country = gr_facility.getValue('country');
+				record.website = company.getValue('website');//gr_facility.getValue('website');
+				record.phone =  company.getValue('phone')
+				record.fax = company.getValue('fax_phone');
+				record.type = gr_facility.getDisplayValue('facility_care_type');
+				record.sys_id = gr_facility.getValue('sys_id');
+				//record.beds = data.getBedAvailability(record.sys_id, $sp.getParameter("type"));
+				var arrBedsByType = record.type.split(",");
+				var strBedCountByType ='<br/>';
+				for (var i=0;i<arrBedsByType.length;i++){
+					strBedCountByType = strBedCountByType + arrBedsByType[i] + ": " + data.getBedAvailability(record.sys_id, arrBedsByType[i]) + "<br/>";
+				}
+				record.beds = strBedCountByType;
+				
 				data.name = gr_facility.getDisplayValue();
 				data.picture = gr_facility.getDisplayValue('banner_image');
-				data.street = gr_facility.getValue('street');
-				data.zip = gr_facility.getValue('zip');
-				data.country = gr_facility.getValue('country');
-				data.website = gr_facility.getValue('website');
-				data.phone = gr_facility.getValue('phone');
-				data.type = gr_facility.getDisplayValue('u_facility_care_type');
-				data.beds = gr_facility.getValue('u_beds_available');
+				data.street = gr_facility.getDisplayValue('location');
+//				data.zip = gr_facility.getValue('location.zip');
+//				data.country = gr_facility.getValue('country');
+				data.website = company.getValue('website');//gr_facility.getValue('website');
+				data.phone =  company.getValue('phone')
+				data.fax = company.getValue('fax_phone');
+				data.type = gr_facility.getDisplayValue('facility_care_type');
 				data.sys_id = gr_facility.getValue('sys_id');
+				data.beds = data.getBedAvailability(data.sys_id, $sp.getParameter("type"));
 				
 				var insurers = new GlideRecord('x_bhrl_hbm_accepted_insurer');
-				insurers.addQuery('company', data.sys_id);
+				insurers.addQuery('facility', data.sys_id);
+				insurers.orderBy("insurer");
+				insurers.query();
+
+				data.insurers = [];
+				while (insurers.next()) {
+					var insurer = {};
+					insurer.sys_id = insurers.getValue('insurer');
+					insurer.name = insurers.getDisplayValue('insurer');
+					data.insurers.push(insurer);
+				}
+				data.list.push(record);
+			}	
+		
+	}
+	else{ */
+	
+	//SHOW FACILITY DETAIL
+	//client script showDetails
+	if (input && input.facility_id) {
+		data.myType = "input.facility_id";
+		data.care_type = $sp.getParameter("type");
+		
+		//retrieve facility detail
+			var gr_facility = new GlideRecord('x_bhrl_hbm_facility');
+			gr_facility.addQuery('sys_id', input.facility_id);
+			gr_facility.query();
+
+			while (gr_facility.next()) {
+
+				var company = gr_facility.company.getRefRecord();
+				data.name = gr_facility.getDisplayValue();
+				data.picture = gr_facility.getDisplayValue('banner_image');
+				data.street = gr_facility.getDisplayValue('location');
+//				data.zip = gr_facility.getValue('location.zip');
+//				data.country = gr_facility.getValue('country');
+				data.website = company.getValue('website');//gr_facility.getValue('website');
+				data.phone =  company.getValue('phone')
+				data.fax = company.getValue('fax_phone');
+				data.type = gr_facility.getDisplayValue('facility_care_type');
+				data.type2 = gr_facility.getValue('facility_care_type');
+				data.sys_id = gr_facility.getValue('sys_id');
+
+				
+
+/*				if(!data.care_type){
+					data.care_types = [];
+					//data.test = data.type;
+					var arrBedsByType = data.type.split(",");
+
+					for (var i=0;i<arrBedsByType.length;i++){
+						var type= {};
+						type.type = arrBedsByType[i];
+						type.count = data.getBedAvailability(data.sys_id, arrBedsByType[i]);
+						data.care_types.push(type);
+					}
+				} else {
+
+					data.beds = data.getBedAvailability(data.sys_id, data.care_type);
+				}*/
+				
+				
+				//if care type not already selected then need to show option to allow choice of facility type (so that bed can be allocated to correct type)
+				if(data.care_type){
+					data.beds = data.getBedAvailability(data.sys_id, data.care_type);
+				} else {
+					data.facility_types = [];
+					var arrBedsByTypeName = data.type.split(", ");
+					var arrBedsByTypeID = data.type2.split(",");
+					for (var i=0;i<arrBedsByTypeName.length;i++){
+						var type = {};
+						type.name = arrBedsByTypeName[i];
+						type.count = data.getBedAvailability(data.sys_id, arrBedsByTypeID[i]);
+						type.sys_id = arrBedsByTypeID[i];
+						data.facility_types.push(type);
+					}
+					
+				}
+				
+				var insurers = new GlideRecord('x_bhrl_hbm_accepted_insurer');
+				insurers.addQuery('facility', data.sys_id);
 				insurers.orderBy("insurer");
 				insurers.query();
 
@@ -182,49 +395,99 @@ ol li a:hover{
 				}
 			}
 	} else {
+		
+		//SHOW LISTING
+		
+		data.myType = "All";
 		//retrieve search results
     data.list = [];
     data.count = 0;
 	//data.title = gs.getMessage("My Product");
 	data.title="Facilities";
-//    var gr = new GlideRecord('alm_asset');
+		
 	
-			var gr = new GlideRecord('core_company');
-    //gr.addQuery('consumer.user.sys_id', gs.getUserID());
+		var gr = new GlideRecord('x_bhrl_hbm_facility');
+		
+		if(data.facility_name){
+			gr.addQuery('name', 'CONTAINS', data.facility_name);
+		}
+		
 		if($sp.getParameter("city")){
-			gr.addQuery('city', 'CONTAINS', $sp.getParameter("city"));
+			gr.addQuery('location.city', 'CONTAINS', $sp.getParameter("city"));
 		}
+		
 		if($sp.getParameter("zip")){
-			gr.addQuery('zip', 'CONTAINS', $sp.getParameter("zip"));
+			gr.addQuery('location.zip', 'CONTAINS', $sp.getParameter("zip"));
 		}
-		if($sp.getParameter("type")){
-			gr.addQuery('u_facility_care_type', 'CONTAINS', $sp.getParameter("type"));
+		
+		data.care_type = $sp.getParameter("type");
+		if(data.care_type){
+			gr.addQuery('facility_care_type', 'CONTAINS', data.care_type);
+			//retrieve Facility Type Name
+			var gr_type = new GlideRecord('x_bhrl_hbm_care_type');
+			gr_type.addQuery('sys_id', data.care_type);
+			gr_type.query();
+			if(gr_type.next()){
+				data.title += " for " + gr_type.getDisplayValue();
+			}
 		}
-		gr.addNotNullQuery('u_facility_care_type');
+
+		gr.addQuery('type', 'Facility');
+		gr.addNotNullQuery('facility_care_type');
 //		gr.addQuery('country', 'USA');
     
     gr.orderBy('name');
 		gr.query();
     while (gr.next()) {
-        var record = {};
-				record.sys_id = gr.getValue('sys_id');
+
+			var record = {};
+			/*record.sys_id = gr.getValue('sys_id');
 				record.name = gr.getDisplayValue();
 record.city = gr.getValue('city');
 record.beds = gr.getValue('u_beds_available');
 record.type = gr.getDisplayValue('u_facility_care_type');
 record.typeID = gr.getValue('u_facility_care_type');
-record.picture = gr.getDisplayValue('banner_image');
+record.picture = gr.getDisplayValue('banner_image');*/
+
+			record.sys_id = gr.getValue('sys_id');
+			record.name = gr.getDisplayValue();
+			record.city = gr.location.getRefRecord().getValue('city');
+			record.type = gr.getDisplayValue('facility_care_type');
+			record.type2 = gr.getValue('facility_care_type');
+			record.typeID = gr.getValue('facility_care_type');
+			//record.beds = data.getBedAvailability(record.sys_id, $sp.getParameter("type"));
 			
-/*				var product_id = gr.getValue('model');
-				var model = new GlideRecord('cmdb_model');
-				model.get(product_id);
-				record.short_description = model.getValue('short_description');
-				record.picture = model.getDisplayValue('picture');
-				record.model = product_id;
-*/				
-        data.list.push(record);
+			//if type is already selected then only show bed count for that type
+			if(data.care_type){
+				record.beds = data.getBedAvailability(record.sys_id, data.care_type);
+			} else {
+				//list out all available beds by type
+				var arrBedsByTypeName = record.type.split(", ");
+				var arrBedsByTypeID = record.type2.split(",");
+				var strBedCountByType ='<br/>';
+				for (var i=0;i<arrBedsByTypeName.length;i++){
+					strBedCountByType = strBedCountByType + arrBedsByTypeName[i] + ": " + data.getBedAvailability(record.sys_id, arrBedsByTypeID[i]) + "<br/>";
+				}
+				record.beds = strBedCountByType;
+			}
+			
+			record.picture = gr.getDisplayValue('banner_image');
+
+			//only push records where that match Insurer if provided in Querystring
+			if(insurerName){
+				var insurers = new GlideRecord('x_bhrl_hbm_accepted_insurer');
+				insurers.addQuery('facility', record.sys_id);
+				insurers.addQuery('insurer.name', insurerName);
+				insurers.query();
+				if(insurers.next()){
+					data.list.push(record);
+				}
+			} else {
+				data.list.push(record);
+			}
     }
 	}
+	//}
 	
 	
 	
@@ -233,46 +496,54 @@ record.picture = gr.getDisplayValue('banner_image');
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-05-26 14:47:48</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>d9f2cef1db5a1b0040c726b38a961989</sys_id>
-        <sys_mod_count>144</sys_mod_count>
+        <sys_mod_count>473</sys_mod_count>
         <sys_name>Facilities List</sys_name>
         <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
         <sys_update_name>sp_widget_d9f2cef1db5a1b0040c726b38a961989</sys_update_name>
-        <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-05-29 05:44:38</sys_updated_on>
+        <sys_updated_by>shivam.chopra</sys_updated_by>
+        <sys_updated_on>2018-08-29 05:01:04</sys_updated_on>
         <template><![CDATA[<div>
   <div class="padder-v">
     <a ng-href="/bms"><span style="font-size:18px;">&#8678;</span> Back Home</a>  
   </div>
-  
+
   <div class="panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title ">{{c.data.title}}</h4> 
     </div>
   </div>
-  <div class="panel-body">
+  <div class="panel-body2">
     <!--div ng-init="spSearch.targetCatalog()"-->
      <!-- &nbsp; -->
       <div>    
         <div ng-if="c.data.list.length" classIGNORE="col-sm-6 col-md-4" ng-repeat="item in c.data.list track by item.sys_id">
             <div class="panel panel-{{::options.color}} b">
               <a ng-click="c.showDetails(item.sys_id, true)" class="panel-body block">
-                <div class="overflow-100">
+
+                  <div class="facility-num pull-left">
+                    <h2 class="text-right">{{$index+1}}</h2>
+                  </div>
+                  <img ng-src="{{item.picture}}" ng-if="item.picture" class="item-image-lg" /> 
+                 <div class="media">
                   <h4 class="m-t-none m-b-xs">{{item.name}}</h4>
-                  <img ng-src="{{item.picture}}" ng-if="item.picture" class="m-r-sm m-b-sm item-image pull-right" />
-									<div class="text-muted item-type">{{item.type}}</div>
+                    
+                  <!--<img ng-src="{{item.picture}}" ng-if="item.picture" class="item-image pull-right" />-->
+									<!--div class="text-muted item-type">{{item.type}}</div-->
                   <div class="text-muted item-short-desc">{{item.city}}</div>
-                  <div class="">No. of beds: {{item.beds}}</div>
+                  <div class=""><strong>No. of beds:</strong><span ng-bind-html="item.beds"></span></div>
                 </div>
+                  
+
               </a>
             </div>
           </div>
         </div>
-
+    
+		<!-- FACILITY DETAIL -->
+    
         <div id="facility_detail">
           <div class="wrapper">
           	<a ng-click="c.hideDetails()"><span style="font-size:18px;">&#8678;</span> Back to results</a>  
@@ -281,7 +552,7 @@ record.picture = gr.getDisplayValue('banner_image');
          	<img ng-src="{{c.data.picture}}" ng-if="c.data.picture" class="item-image-lg" />  
           <div class="wrapper bg">
           	<h2 class="m-t-none">{{c.data.name}}</h2>
-            <h4>{{c.data.type}}</h4>
+            <!--h4>{{c.data.type}}</h4-->
 					</div>
 
           <div class="wrapper">
@@ -294,21 +565,32 @@ record.picture = gr.getDisplayValue('banner_image');
             <div>
             <i class="m-b m-r fa fa-phone fa-2x text-default"></i>{{c.data.phone}}
             </div>
+            <div ng-if="c.data.fax">
+            <i class="m-b m-r fa fa-fax fa-2x text-default"></i>{{c.data.fax}}
+            </div>
+          </div>
+
+          <div ng-if="!data.care_type">
+            <h4 class="wrapper">Facility Type</h4>
+            <ol class="facility-types m-b-xl">
+              <li class="m-b-sm m-t-sm" ng-repeat="type in c.data.facility_types track by type.sys_id" ng-show="c.show($index)" ng-click="c.selectFacilityType(type.sys_id, $index)"><a ng-class="{selected: c.data.selectedTypeIndex == $index}">{{type.name}}<span class="pull-right">{{type.count}} bed(s) available</span></a></li>
+            </ol>
           </div>
           
-          <div class="wrapper bg-success text-center">
+          <h4 class="wrapper">Insurances Accepted</h4>
+          <div class="wrapper input-group input-group-"><input class="form-control input-typeahead" placeholder="Insurance Search: " ng-model="c.data.search"></div>
+          <ol class="insurers m-b-xl">
+            <li class="m-b-sm m-t-sm" ng-repeat="insurer in c.data.insurers track by insurer.sys_id" ng-show="c.show($index)" ng-click="c.selectInsurer(insurer.name, $index)"><a ng-class="{selected: c.data.selectedIndex == $index}">{{insurer.name}}</a></li>
+          </ol>
+          
+          <div ng-if="data.care_type" class="wrapper bg-success text-center">
 							<p class="m-n"><strong>This facility has {{c.data.beds}} bed(s) available</strong></p>  
           </div>
         
-          <div class="wrapper instr">
-            <p>To secure a bed please select the patients insurance company from the list below and complete the required information.</p>
+          <div class="wrapper instr text-center">
+            <!--<p>To secure a bed please select the patients insurance company from the list below and complete the required information.</p>-->
+            <button class="btn btn-primary" ng-click="c.redirect(c.data.sys_id, c.data.insurer_name, c.data.selected, c.data.care_type, c.data.selectedType)">${Request a Bed}</button>
           </div>
-          
-          <h4 class="wrapper">Accepted Insurance Companies</h4>
-
-          <ol class="m-b-xl">
-            <li class="m-b-sm m-t-sm" ng-repeat="insurer in c.data.insurers track by insurer.sys_id"><a ng-href="?id=sc_cat_item_2&sys_id=4d0f0a2edbda974082636f048a9619f0&facility_id={{c.data.sys_id}}&insurer={{insurer.sys_id}}">{{insurer.name}}</a></li>
-          </ol>
           
           <hr/>
 

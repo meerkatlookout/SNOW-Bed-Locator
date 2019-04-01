@@ -67,7 +67,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_bhrl_hbm_hospital_bed" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">b634edbedb4adb0082636f048a96195c</sys_ui_form>
-            <sys_ui_section caption="Activities" display_value="Activities" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">763461fedb4adb0082636f048a961998</sys_ui_section>
+            <sys_ui_section caption="Financial" display_value="Financial" name="x_bhrl_hbm_hospital_bed" sys_domain="global" view="Default view">763461fedb4adb0082636f048a961998</sys_ui_section>
             <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
             <sys_updated_on>2018-05-17 04:51:47</sys_updated_on>
         </sys_ui_form_section>
@@ -77,7 +77,6 @@
             <sys_class_name>sys_ui_form</sys_class_name>
             <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
             <sys_created_on>2018-05-17 04:51:46</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>b634edbedb4adb0082636f048a96195c</sys_id>
@@ -86,7 +85,6 @@
             <sys_overrides/>
             <sys_package display_value="Big House Hospital Bed Manager" source="x_bhrl_hbm">280ea8a2db0e9b0082636f048a9619d0</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</sys_scope>
             <sys_update_name>sys_ui_form_sections_b634edbedb4adb0082636f048a96195c</sys_update_name>
             <sys_updated_by>shivam.chopra@bighouseresources.com</sys_updated_by>
