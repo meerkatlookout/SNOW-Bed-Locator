@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="IMP Companies" max_length="40" name="x_bhrl_hbm_imp_companies" type="collection">
         <element attributes="import_attribute_name=sys_domain,edge_encryption_enabled=true" label="Sys domain" max_length="40" name="sys_domain" type="string"/>
         <element attributes="import_attribute_name=active,edge_encryption_enabled=true" label="active" max_length="40" name="u_active" type="string"/>

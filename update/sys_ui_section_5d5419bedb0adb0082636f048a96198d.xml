@@ -1,213 +1,226 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="5d5419bedb0adb0082636f048a96198d" sys_domain="09ff3d105f231000b12e3572f2b4775d" table="cmn_location" version="3" view="Hospital">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>174bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d05a574bdba4cc102ecd8a8b3a96199c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>street</element>
             <position>1</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>974bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>585a574bdba4cc102ecd8a8b3a96199c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>city</element>
             <position>2</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>1b4bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>dc5a574bdba4cc102ecd8a8b3a96199c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
             <position>3</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>9b4bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>545a574bdba4cc102ecd8a8b3a96199d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>zip</element>
             <position>4</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>1f4bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d85a574bdba4cc102ecd8a8b3a96199d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>country</element>
             <position>5</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>9f4bf1cfdbc61f0082636f048a961906</sys_id>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>505a574bdba4cc102ecd8a8b3a96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_bhrl_hbm_active</element>
+            <position>6</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d45a574bdba4cc102ecd8a8b3a96199e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>134bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>7</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>5c5a574bdba4cc102ecd8a8b3a96199e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_bhrl_hbm_hospital_flag</element>
-            <position>7</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>934bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>8</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d05a574bdba4cc102ecd8a8b3a96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>x_bhrl_hbm_type</element>
-            <position>8</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>174bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>9</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>585a574bdba4cc102ecd8a8b3a96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>contact</element>
-            <position>9</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>974bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>10</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>dc5a574bdba4cc102ecd8a8b3a96199f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>phone</element>
-            <position>10</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>1b4bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>11</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>545a574bdba4cc102ecd8a8b3a9619a0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fax_phone</element>
-            <position>11</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>9b4bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>12</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d85a574bdba4cc102ecd8a8b3a9619a0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>parent</element>
-            <position>12</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>1f4bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>13</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>505a574bdba4cc102ecd8a8b3a9619a1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>13</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>9f4bf1cfdbc61f0082636f048a961907</sys_id>
+            <position>14</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>d45a574bdba4cc102ecd8a8b3a9619a1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>full_name</element>
-            <position>14</position>
-            <sys_created_by>chris.corscadden</sys_created_by>
-            <sys_created_on>2018-05-18 01:11:03</sys_created_on>
-            <sys_id>134bf1cfdbc61f0082636f048a961908</sys_id>
+            <position>15</position>
+            <sys_created_by>paul.douglas</sys_created_by>
+            <sys_created_on>2019-10-22 07:05:28</sys_created_on>
+            <sys_id>5c5a574bdba4cc102ecd8a8b3a9619a1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="09ff3d105f231000b12e3572f2b4775d" view="9954d5bedb0adb0082636f048a96199c">5d5419bedb0adb0082636f048a96198d</sys_ui_section>
-            <sys_updated_by>chris.corscadden</sys_updated_by>
-            <sys_updated_on>2018-05-18 01:11:03</sys_updated_on>
+            <sys_updated_by>paul.douglas</sys_updated_by>
+            <sys_updated_on>2019-10-22 07:05:28</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="u_salvage_value" label="salvage_value" language="en" table="x_bhrl_hbm_imp_hospital_bed">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>u_salvage_value</element>

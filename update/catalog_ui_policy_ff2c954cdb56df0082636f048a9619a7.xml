@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="catalog_ui_policy">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="catalog_ui_policy">
     <catalog_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
         <applies_catalog>true</applies_catalog>
@@ -13,6 +12,7 @@
         <description/>
         <global>true</global>
         <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
         <model_id/>
         <model_table/>
         <on_load>true</on_load>

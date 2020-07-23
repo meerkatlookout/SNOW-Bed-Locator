@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sc_cat_item_catalog">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
         <sc_cat_item display_value="Variable Height Beds">445f6a43dbca1f0082636f048a9619bd</sc_cat_item>
         <sc_catalog display_value="">41755196dbd20300e55436ba7c9619ae</sc_catalog>

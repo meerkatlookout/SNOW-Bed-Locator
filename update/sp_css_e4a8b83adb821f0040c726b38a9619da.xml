@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_css">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css">
     <sp_css action="INSERT_OR_UPDATE">
         <css>body{&#13;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#deeaf8+0,fcfdff+100 */&#13;

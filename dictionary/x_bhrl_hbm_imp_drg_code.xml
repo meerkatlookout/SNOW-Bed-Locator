@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="IMP DRG Code" max_length="40" name="x_bhrl_hbm_imp_drg_code" type="collection">
         <element attributes="import_attribute_name=mdc,edge_encryption_enabled=true" label="mdc" max_length="40" name="u_mdc" type="string"/>
         <element attributes="import_attribute_name=ms_drg,edge_encryption_enabled=true" label="ms_drg" max_length="40" name="u_ms_drg" type="string"/>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_ng_template">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_ng_template">
     <sp_ng_template action="INSERT_OR_UPDATE">
         <id>bh_bed_locator_search_facility</id>
         <sp_widget display_value="BH Image Link Facility Search">fc175216db44ab00253ff2353a9619a3</sp_widget>

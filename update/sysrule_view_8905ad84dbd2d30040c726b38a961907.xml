@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sysrule_view">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sysrule_view">
     <sysrule_view action="INSERT_OR_UPDATE">
         <active>false</active>
         <advanced>false</advanced>

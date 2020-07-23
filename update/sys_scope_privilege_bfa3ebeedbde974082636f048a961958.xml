@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_scope_privilege">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
     <sys_scope_privilege action="INSERT_OR_UPDATE">
         <operation>write</operation>
         <source_scope display_value="Big House Hospital Bed Manager">280ea8a2db0e9b0082636f048a9619d0</source_scope>

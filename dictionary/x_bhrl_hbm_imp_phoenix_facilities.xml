@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="IMP Phoenix Facilities" max_length="40" name="x_bhrl_hbm_imp_phoenix_facilities" type="collection">
         <element attributes="import_attribute_name=Accepted Health Insurances 1,edge_encryption_enabled=true" label="Accepted Health Insurances 1" max_length="49" name="u_accepted_health_insurances_1" type="string"/>
         <element attributes="import_attribute_name=Accepted Health Insurances 2,edge_encryption_enabled=true" label="Accepted Health Insurances 2" max_length="49" name="u_accepted_health_insurances_2" type="string"/>

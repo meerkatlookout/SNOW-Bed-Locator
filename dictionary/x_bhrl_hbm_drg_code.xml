@@ -1,42 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="DRG Codes" max_length="40" name="x_bhrl_hbm_drg_code" type="collection">
         <element choice="1" label="MDC" max_length="40" name="mdc" type="choice">
             <choice>
-                <element label="PRE" sequence="0" value="PRE"/>
-                <element label="1" sequence="1" value="1"/>
-                <element label="2" sequence="2" value="2"/>
-                <element label="3" sequence="3" value="3"/>
-                <element label="4" sequence="4" value="4"/>
-                <element label="5" sequence="5" value="5"/>
-                <element label="6" sequence="6" value="6"/>
-                <element label="7" sequence="7" value="7"/>
-                <element label="8" sequence="8" value="8"/>
-                <element label="9" sequence="9" value="9"/>
-                <element label="10" sequence="10" value="10"/>
-                <element label="11" sequence="11" value="11"/>
-                <element label="12" sequence="12" value="12"/>
-                <element label="13" sequence="13" value="13"/>
-                <element label="14" sequence="14" value="14"/>
-                <element label="15" sequence="15" value="15"/>
-                <element label="16" sequence="16" value="16"/>
-                <element label="17" sequence="17" value="17"/>
-                <element label="18" sequence="18" value="18"/>
-                <element label="19" sequence="19" value="19"/>
-                <element label="20" sequence="20" value="20"/>
-                <element label="21" sequence="21" value="21"/>
-                <element label="22" sequence="22" value="22"/>
-                <element label="23" sequence="23" value="23"/>
-                <element label="24" sequence="24" value="24"/>
-                <element label="25" sequence="25" value="25"/>
+                <element inactive_on_update="false" label="PRE" sequence="0" value="PRE"/>
+                <element inactive_on_update="false" label="1" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="3" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="4" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="5" sequence="5" value="5"/>
+                <element inactive_on_update="false" label="6" sequence="6" value="6"/>
+                <element inactive_on_update="false" label="7" sequence="7" value="7"/>
+                <element inactive_on_update="false" label="8" sequence="8" value="8"/>
+                <element inactive_on_update="false" label="9" sequence="9" value="9"/>
+                <element inactive_on_update="false" label="10" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="11" sequence="11" value="11"/>
+                <element inactive_on_update="false" label="12" sequence="12" value="12"/>
+                <element inactive_on_update="false" label="13" sequence="13" value="13"/>
+                <element inactive_on_update="false" label="14" sequence="14" value="14"/>
+                <element inactive_on_update="false" label="15" sequence="15" value="15"/>
+                <element inactive_on_update="false" label="16" sequence="16" value="16"/>
+                <element inactive_on_update="false" label="17" sequence="17" value="17"/>
+                <element inactive_on_update="false" label="18" sequence="18" value="18"/>
+                <element inactive_on_update="false" label="19" sequence="19" value="19"/>
+                <element inactive_on_update="false" label="20" sequence="20" value="20"/>
+                <element inactive_on_update="false" label="21" sequence="21" value="21"/>
+                <element inactive_on_update="false" label="22" sequence="22" value="22"/>
+                <element inactive_on_update="false" label="23" sequence="23" value="23"/>
+                <element inactive_on_update="false" label="24" sequence="24" value="24"/>
+                <element inactive_on_update="false" label="25" sequence="25" value="25"/>
             </choice>
         </element>
         <element display="true" label="MS DRG" max_length="40" name="ms_drg" type="integer"/>
         <element label="MS DRG Title" max_length="200" name="ms_drg_title" type="string"/>
         <element choice="1" label="Type" max_length="40" name="type" type="choice">
             <choice>
-                <element label="SURG" sequence="1" value="SURG"/>
-                <element label="MED" sequence="2" value="MED"/>
+                <element inactive_on_update="false" label="SURG" sequence="1" value="SURG"/>
+                <element inactive_on_update="false" label="MED" sequence="2" value="MED"/>
             </choice>
         </element>
     </element>

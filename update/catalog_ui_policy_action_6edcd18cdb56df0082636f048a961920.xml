@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="catalog_ui_policy_action">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
     <catalog_ui_policy_action action="INSERT_OR_UPDATE">
         <catalog_item display_value="Patient Bed Request">2175c20bdb0a1f0082636f048a961923</catalog_item>
         <catalog_variable>IO:445f1e03db8a1f0082636f048a9619bd</catalog_variable>
+        <cleared>false</cleared>
         <disabled>ignore</disabled>
         <field/>
         <mandatory>ignore</mandatory>
+        <order>100</order>
         <sys_class_name>catalog_ui_policy_action</sys_class_name>
         <sys_created_by>shivam.chopra@bighouseresources.com</sys_created_by>
         <sys_created_on>2018-05-21 01:32:31</sys_created_on>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="io_set_item">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
     <io_set_item action="INSERT_OR_UPDATE">
         <order>100</order>
         <sc_cat_item display_value="Variable Height Beds">445f6a43dbca1f0082636f048a9619bd</sc_cat_item>

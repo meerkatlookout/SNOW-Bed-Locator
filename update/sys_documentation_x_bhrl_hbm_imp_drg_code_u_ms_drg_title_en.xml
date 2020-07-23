@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_documentation element="u_ms_drg_title" label="ms_drg_title" language="en" table="x_bhrl_hbm_imp_drg_code">
         <sys_documentation action="INSERT_OR_UPDATE">
             <element>u_ms_drg_title</element>

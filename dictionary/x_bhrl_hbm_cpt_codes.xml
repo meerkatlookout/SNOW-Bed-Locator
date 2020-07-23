@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="CPT Codes" max_length="40" name="x_bhrl_hbm_cpt_codes" type="collection">
         <element label="Code Description" max_length="500" name="code_description" type="string"/>
         <element display="true" label="CPT Codes" max_length="100" name="cpt_codes" type="string"/>

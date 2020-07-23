@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="IMP Bed Locator" max_length="40" name="x_bhrl_hbm_imp_bed_locator" type="collection">
         <element attributes="import_attribute_name=bed_location,edge_encryption_enabled=true" label="bed_location" max_length="40" name="u_bed_location" type="string"/>
         <element attributes="import_attribute_name=end_date,edge_encryption_enabled=true" label="end_date" max_length="40" name="u_end_date" type="string"/>

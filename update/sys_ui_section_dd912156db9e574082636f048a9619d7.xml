@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="dd912156db9e574082636f048a9619d7" sys_domain="09ff3d105f231000b12e3572f2b4775d" table="x_bhrl_hbm_accepted_health_insurances" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>

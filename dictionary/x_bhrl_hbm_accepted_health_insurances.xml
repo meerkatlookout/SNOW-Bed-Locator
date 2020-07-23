@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Accepted Health Insurances" max_length="40" name="x_bhrl_hbm_accepted_health_insurances" type="collection">
         <element label="Name" max_length="40" name="name" type="string"/>
         <index name="index">

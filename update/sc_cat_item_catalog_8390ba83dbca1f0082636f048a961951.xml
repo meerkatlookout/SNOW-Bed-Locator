@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sc_cat_item_catalog">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
         <sc_cat_item display_value="Heavy Duty Beds">6d8a2a4fdb8a1f0082636f048a961944</sc_cat_item>
         <sc_catalog display_value="">41755196dbd20300e55436ba7c9619ae</sc_catalog>

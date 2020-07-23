@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="wf_workflow_version">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
     <wf_workflow_version action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_stages>{"activities":{"53015d06dbc357002ecd8a8b3a961938":"1701d906dbc357002ecd8a8b3a9619ee","57015d06dbc357002ecd8a8b3a961940":"1701d906dbc357002ecd8a8b3a9619ee","d301d906dbc357002ecd8a8b3a9619f1":"1301d906dbc357002ecd8a8b3a9619ee","5b01d906dbc357002ecd8a8b3a9619f2":"9301d906dbc357002ecd8a8b3a9619ee"},"ends":["1b015d06dbc357002ecd8a8b3a96193f"],"subflows":[],"stages":{"1701d906dbc357002ecd8a8b3a9619ee":{"order":120,"duration":"8 Hours","stageId":"1701d906dbc357002ecd8a8b3a9619ee","name":"Fulfillment","value":"fulfillment"},"1301d906dbc357002ecd8a8b3a9619ee":{"order":1100,"duration":"","stageId":"1301d906dbc357002ecd8a8b3a9619ee","name":"Completed","value":"complete"},"9301d906dbc357002ecd8a8b3a9619ee":{"order":90,"duration":"","stageId":"9301d906dbc357002ecd8a8b3a9619ee","name":"Request Approved","value":"request_approved"}}}</activity_stages>
+        <activity_stages>{"ends":["1b015d06dbc357002ecd8a8b3a96193f"],"stages":{"1701d906dbc357002ecd8a8b3a9619ee":{"duration":"8 Hours","order":120,"stageId":"1701d906dbc357002ecd8a8b3a9619ee","name":"Fulfillment","value":"fulfillment"},"1301d906dbc357002ecd8a8b3a9619ee":{"duration":"","order":1100,"stageId":"1301d906dbc357002ecd8a8b3a9619ee","name":"Completed","value":"complete"},"9301d906dbc357002ecd8a8b3a9619ee":{"duration":"","order":90,"stageId":"9301d906dbc357002ecd8a8b3a9619ee","name":"Request Approved","value":"request_approved"}},"activities":{"53015d06dbc357002ecd8a8b3a961938":"1701d906dbc357002ecd8a8b3a9619ee","57015d06dbc357002ecd8a8b3a961940":"1701d906dbc357002ecd8a8b3a9619ee","d301d906dbc357002ecd8a8b3a9619f1":"1301d906dbc357002ecd8a8b3a9619ee","5b01d906dbc357002ecd8a8b3a9619f2":"9301d906dbc357002ecd8a8b3a9619ee"},"subflows":[]}</activity_stages>
         <after_business_rules>false</after_business_rules>
         <checked_out/>
         <checked_out_by/>
@@ -32,9 +31,9 @@
         <sys_created_by>paul.douglas</sys_created_by>
         <sys_created_on>2018-07-03 12:35:19</sys_created_on>
         <sys_id>5b01d906dbc357002ecd8a8b3a9619eb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>paul.douglas</sys_updated_by>
-        <sys_updated_on>2018-07-03 12:37:53</sys_updated_on>
+        <sys_updated_on>2019-10-21 01:32:22</sys_updated_on>
         <table>sc_req_item</table>
         <timezone/>
         <validated>false</validated>

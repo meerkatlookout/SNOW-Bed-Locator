@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="m2m_sp_theme_css_include">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_theme_css_include">
     <m2m_sp_theme_css_include action="INSERT_OR_UPDATE">
         <order>10</order>
         <sp_css_include display_value="Hospital Bed Manager">7758f83adb821f0040c726b38a9619c0</sp_css_include>

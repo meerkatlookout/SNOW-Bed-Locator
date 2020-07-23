@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="all_tables.text_index_translations=true,text_index_translations=true" label="Location" max_length="40" name="cmn_location" text_index="true" type="collection">
+        <element label="Active" max_length="40" name="x_bhrl_hbm_active" type="boolean"/>
         <element label="Building" max_length="32" name="x_bhrl_hbm_building" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=building^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element label="Floor" max_length="32" name="x_bhrl_hbm_floor" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=floor^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element label="Hospital" max_length="32" name="x_bhrl_hbm_hospital" reference="cmn_location" reference_qual="x_bhrl_hbm_type=hospital^EQ" reference_qual_condition="x_bhrl_hbm_type=hospital^EQ" type="reference"/>
@@ -8,20 +8,20 @@
         <element label="Room" max_length="32" name="x_bhrl_hbm_room" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=room^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>
         <element choice="1" label="Status" max_length="40" name="x_bhrl_hbm_status" type="choice">
             <choice>
-                <element label="Available" sequence="10" value="available"/>
-                <element label="Busy" sequence="20" value="busy"/>
-                <element label="Out of service" sequence="30" value="outofservice"/>
+                <element inactive_on_update="false" label="Available" sequence="10" value="available"/>
+                <element inactive_on_update="false" label="Busy" sequence="20" value="busy"/>
+                <element inactive_on_update="false" label="Out of service" sequence="30" value="outofservice"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Hospital Type" max_length="40" name="x_bhrl_hbm_type" type="choice">
             <choice>
-                <element label="Hospital" sequence="0" value="hospital"/>
-                <element label="Building" sequence="1" value="building"/>
-                <element label="Wing" sequence="2" value="wing"/>
-                <element label="Ward" sequence="3" value="ward"/>
-                <element label="Floor" sequence="4" value="floor"/>
-                <element label="Room" sequence="5" value="room"/>
-                <element label="Bed Location" sequence="6" value="bed location"/>
+                <element inactive_on_update="false" label="Hospital" sequence="0" value="hospital"/>
+                <element inactive_on_update="false" label="Building" sequence="1" value="building"/>
+                <element inactive_on_update="false" label="Wing" sequence="2" value="wing"/>
+                <element inactive_on_update="false" label="Ward" sequence="3" value="ward"/>
+                <element inactive_on_update="false" label="Floor" sequence="4" value="floor"/>
+                <element inactive_on_update="false" label="Room" sequence="5" value="room"/>
+                <element inactive_on_update="false" label="Bed Location" sequence="6" value="bed location"/>
             </choice>
         </element>
         <element label="Ward" max_length="32" name="x_bhrl_hbm_ward" reference="cmn_location" reference_qual="javascript:'x_bhrl_hbm_type=ward^x_bhrl_hbm_hospital='+current.x_bhrl_hbm_hospital" type="reference" use_reference_qualifier="advanced"/>

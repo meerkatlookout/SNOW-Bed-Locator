@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="db_image">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
     <db_image action="INSERT_OR_UPDATE">
         <active>true</active>
         <category>Service Portal</category>
@@ -33,6 +32,7 @@
         <image_width>512</image_width>
         <size_bytes>32168</size_bytes>
         <size_compressed>28563</size_compressed>
+        <state/>
         <sys_created_by>shivam.chopra</sys_created_by>
         <sys_created_on>2018-08-28 02:30:11</sys_created_on>
         <sys_id>4d9f5ff7dbc46f00253ff2353a9619d1</sys_id>

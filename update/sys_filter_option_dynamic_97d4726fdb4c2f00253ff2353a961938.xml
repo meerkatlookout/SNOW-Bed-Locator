@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_filter_option_dynamic">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_filter_option_dynamic">
     <sys_filter_option_dynamic action="INSERT_OR_UPDATE">
         <active>true</active>
         <available_for_default>true</available_for_default>

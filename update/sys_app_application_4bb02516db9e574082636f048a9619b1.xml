@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sys_app_application">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="09ff3d105f231000b12e3572f2b4775d" table="sys_app_application">
     <sys_app_application action="INSERT_OR_UPDATE">
         <active>true</active>
         <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>

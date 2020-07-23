@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_ng_template">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_ng_template">
     <sp_ng_template action="INSERT_OR_UPDATE">
         <id>notifyInsuranceTemplate</id>
         <sp_widget display_value="Facilities List">d9f2cef1db5a1b0040c726b38a961989</sp_widget>

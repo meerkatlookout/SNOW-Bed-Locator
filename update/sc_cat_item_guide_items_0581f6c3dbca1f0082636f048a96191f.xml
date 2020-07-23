@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sc_cat_item_guide_items">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_guide_items">
     <sc_cat_item_guide_items action="INSERT_OR_UPDATE">
         <condition>IO:4b84da07db4a1f0082636f048a96194cINb5a2f10bdbc61f0082636f048a96199c,0dc4718bdbc61f0082636f048a96194a,cdd4f18bdbc61f0082636f048a9619bd,f1e4b18bdbc61f0082636f048a961944,e65c654cdbd2d30040c726b38a9619fb,d97ca54cdbd2d30040c726b38a961906,ab8c294cdbd2d30040c726b38a9619a1,6eaca94cdbd2d30040c726b38a9619f5^EQ</condition>
         <guide display_value="Patient Bed Request">2175c20bdb0a1f0082636f048a961923</guide>

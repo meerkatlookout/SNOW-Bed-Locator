@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_search_source">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_search_source">
     <sp_search_source action="INSERT_OR_UPDATE">
         <advanced_typeahead_config>false</advanced_typeahead_config>
         <condition table="core_company">u_facility_care_typeISNOTEMPTY^EQ<item endquery="false" field="u_facility_care_type" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
@@ -13,10 +12,12 @@
 })(query);]]></data_fetch_script>
         <display_fields/>
         <enable_typeahead>true</enable_typeahead>
+        <facet_generation_script/>
         <id>bedlocator_zip</id>
         <is_scripted_source>false</is_scripted_source>
         <name>Bed Locator - Facility - Zip</name>
         <page display_value="bed_locator_map">a8078a39db5a1b0040c726b38a961981</page>
+        <pagination_supported>false</pagination_supported>
         <primary_display_field>zip</primary_display_field>
         <roles/>
         <search_page_template><![CDATA[<div>
